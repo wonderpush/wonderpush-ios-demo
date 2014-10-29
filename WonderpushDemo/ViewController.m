@@ -36,6 +36,9 @@ static NSArray* cellConfiguration;
                           @{@"title":@"INACTIVE USER",    @"event":@"inactivity",
                             @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]}];
     // Do any additional setup after loading the view, typically from a nib.
+    [[NSNotificationCenter defaultCenter] addObserverForName:WP_NOTIFICATION_INITIALIZED object:nil queue:nil usingBlock:^(NSNotification *note) {
+        [self setTitle:@"SIMULATE AN EVENT BELOW"];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
