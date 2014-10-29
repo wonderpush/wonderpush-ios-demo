@@ -19,16 +19,22 @@ static NSArray* cellConfiguration;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    cellConfiguration = @[@{@"title":@"FIRST VISIT", @"event": @"firstVisit", @"bgColor": [UIColor colorWithRed:0/255. green:144/255. blue:255/255. alpha:1.0]},
-                          @{@"title":@"NEWS READ", @"event": @"newsRead", @"bgColor": [UIColor colorWithRed:16/255. green:172/255. blue:255/255. alpha:1.0]},
-                          @{@"title":@"GAME OVER", @"event": @"gameOver", @"bgColor": [UIColor colorWithRed:99/255. green:192/255. blue:242/255.f alpha:1.0]},
-                          @{@"title":@"LIKE", @"event": @"like", @"bgColor": [UIColor colorWithRed:172/255. green:217/255. blue:228/255. alpha:1.0]},
-                          @{@"title":@"ADD TO CART", @"event": @"addToCart", @"bgColor": [UIColor colorWithRed:149/255. green:149/255. blue:149/255. alpha:1.0]},
-                          @{@"title":@"PURCHASE", @"event": @"purchase", @"bgColor": [UIColor colorWithRed:51/255. green:51/255. blue:51/255. alpha:1.0]},
-                          @{@"title":@"NEAR EIFFEL TWR.", @"event": @"geofencing", @"bgColor": [UIColor colorWithRed:51/255. green:204/255. blue:153/255. alpha:1.0]},
-                          @{@"title":@"NEAR LOUVRE", @"event": @"geofencing", @"bgColor": [UIColor colorWithRed:0/255. green:153/255. blue:102/255. alpha:1.0]},
-                          @{@"title":@"INACTIVE USER", @"event": @"inactivity", @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]}];
-//    [self.tableView setAllowsSelection:NO];
+    cellConfiguration = @[@{@"title":@"FIRST VISIT",      @"event":@"firstVisit",
+                            @"bgColor": [UIColor colorWithRed:0/255.   green:144/255. blue:255/255. alpha:1.0]},
+                          @{@"title":@"NEWS READ",        @"event":@"newsRead",
+                            @"bgColor": [UIColor colorWithRed:16/255.  green:172/255. blue:255/255. alpha:1.0]},
+                          @{@"title":@"GAME OVER",        @"event":@"gameOver",
+                            @"bgColor": [UIColor colorWithRed:99/255.  green:192/255. blue:242/255. alpha:1.0]},
+                          @{@"title":@"LIKE",             @"event":@"like",
+                            @"bgColor": [UIColor colorWithRed:172/255. green:217/255. blue:228/255. alpha:1.0]},
+                          @{@"title":@"ADD TO CART",      @"event":@"addToCart",
+                            @"bgColor": [UIColor colorWithRed:149/255. green:149/255. blue:149/255. alpha:1.0]},
+                          @{@"title":@"PURCHASE",         @"event":@"purchase",
+                            @"bgColor": [UIColor colorWithRed: 51/255. green: 51/255. blue: 51/255. alpha:1.0]},
+                          @{@"title":@"GEOFENCING",       @"event":@"geofencing",
+                            @"bgColor": [UIColor colorWithRed:  0/255. green:153/255. blue:102/255. alpha:1.0]},
+                          @{@"title":@"INACTIVE USER",    @"event":@"inactivity",
+                            @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]}];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -68,7 +74,10 @@ static NSArray* cellConfiguration;
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [WonderPush trackEvent:[[cellConfiguration objectAtIndex:[indexPath row]] valueForKey:@"event"] withData:nil];
+    id cellConf = [cellConfiguration objectAtIndex:[indexPath row]];
+    id type = [cellConf valueForKey:@"event"];
+    id data = [cellConf valueForKey:@"data"];
+    [WonderPush trackEvent:type withData:data];
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     [cell setSelected:NO];
 }
