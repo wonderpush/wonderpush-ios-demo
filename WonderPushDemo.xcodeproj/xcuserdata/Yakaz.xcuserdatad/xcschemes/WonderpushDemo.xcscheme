@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A1B8509919DC05FE00D1B6FB"
-               BuildableName = "WonderpushDemo.app"
-               BlueprintName = "WonderpushDemo"
-               ReferencedContainer = "container:WonderpushDemo.xcodeproj">
+               BuildableName = "WonderPush Demo.app"
+               BlueprintName = "WonderPushDemo"
+               ReferencedContainer = "container:WonderPushDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "A1B850B219DC05FF00D1B6FB"
                BuildableName = "WonderpushDemoTests.xctest"
                BlueprintName = "WonderpushDemoTests"
-               ReferencedContainer = "container:WonderpushDemo.xcodeproj">
+               ReferencedContainer = "container:WonderPushDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "A1E3E06819E4237A00A4EE09"
                BuildableName = "WonderPushTests.xctest"
                BlueprintName = "WonderPushTests"
-               ReferencedContainer = "container:WonderpushDemo.xcodeproj">
+               ReferencedContainer = "container:WonderPushDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -63,7 +63,7 @@
                BlueprintIdentifier = "A1B850B219DC05FF00D1B6FB"
                BuildableName = "WonderpushDemoTests.xctest"
                BlueprintName = "WonderpushDemoTests"
-               ReferencedContainer = "container:WonderpushDemo.xcodeproj">
+               ReferencedContainer = "container:WonderPushDemo.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -73,7 +73,7 @@
                BlueprintIdentifier = "A1E3E06819E4237A00A4EE09"
                BuildableName = "WonderPushTests.xctest"
                BlueprintName = "WonderPushTests"
-               ReferencedContainer = "container:WonderpushDemo.xcodeproj">
+               ReferencedContainer = "container:WonderPushDemo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -81,9 +81,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A1B8509919DC05FE00D1B6FB"
-            BuildableName = "WonderpushDemo.app"
-            BlueprintName = "WonderpushDemo"
-            ReferencedContainer = "container:WonderpushDemo.xcodeproj">
+            BuildableName = "WonderPush Demo.app"
+            BlueprintName = "WonderPushDemo"
+            ReferencedContainer = "container:WonderPushDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -100,9 +100,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A1B8509919DC05FE00D1B6FB"
-            BuildableName = "WonderpushDemo.app"
-            BlueprintName = "WonderpushDemo"
-            ReferencedContainer = "container:WonderpushDemo.xcodeproj">
+            BuildableName = "WonderPush Demo.app"
+            BlueprintName = "WonderPushDemo"
+            ReferencedContainer = "container:WonderPushDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -118,9 +118,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A1B8509919DC05FE00D1B6FB"
-            BuildableName = "WonderpushDemo.app"
-            BlueprintName = "WonderpushDemo"
-            ReferencedContainer = "container:WonderpushDemo.xcodeproj">
+            BuildableName = "WonderPush Demo.app"
+            BlueprintName = "WonderPushDemo"
+            ReferencedContainer = "container:WonderPushDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

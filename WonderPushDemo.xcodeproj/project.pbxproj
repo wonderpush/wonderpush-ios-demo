@@ -39,7 +39,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A1B8509A19DC05FE00D1B6FB /* WonderpushDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WonderpushDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1B8509A19DC05FE00D1B6FB /* WonderPushDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WonderPushDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B8509E19DC05FE00D1B6FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1B8509F19DC05FE00D1B6FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A1B850A119DC05FE00D1B6FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 		A1B8509B19DC05FE00D1B6FB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A1B8509A19DC05FE00D1B6FB /* WonderpushDemo.app */,
+				A1B8509A19DC05FE00D1B6FB /* WonderPushDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,9 +145,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A1B8509919DC05FE00D1B6FB /* WonderpushDemo */ = {
+		A1B8509919DC05FE00D1B6FB /* WonderPushDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A1B850BD19DC05FF00D1B6FB /* Build configuration list for PBXNativeTarget "WonderpushDemo" */;
+			buildConfigurationList = A1B850BD19DC05FF00D1B6FB /* Build configuration list for PBXNativeTarget "WonderPushDemo" */;
 			buildPhases = (
 				A1B8509619DC05FE00D1B6FB /* Sources */,
 				A1B8509719DC05FE00D1B6FB /* Frameworks */,
@@ -158,9 +158,9 @@
 			);
 			dependencies = (
 			);
-			name = WonderpushDemo;
+			name = WonderPushDemo;
 			productName = WonderpushDemo;
-			productReference = A1B8509A19DC05FE00D1B6FB /* WonderpushDemo.app */;
+			productReference = A1B8509A19DC05FE00D1B6FB /* WonderPushDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -178,7 +178,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A1B8509519DC05FE00D1B6FB /* Build configuration list for PBXProject "WonderpushDemo" */;
+			buildConfigurationList = A1B8509519DC05FE00D1B6FB /* Build configuration list for PBXProject "WonderPushDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -191,7 +191,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A1B8509919DC05FE00D1B6FB /* WonderpushDemo */,
+				A1B8509919DC05FE00D1B6FB /* WonderPushDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -351,7 +351,7 @@
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/wonderpush-ekklskbdxlzpzsfdnudyrwxtxlkz/Build/Products/Debug-iphoneos/include/WonderPushStatic",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WonderPushDemo;
 				PROVISIONING_PROFILE = "0e6b9969-b569-4865-a648-e7ba9c600972";
 			};
 			name = Debug;
@@ -377,7 +377,7 @@
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/wonderpush-ekklskbdxlzpzsfdnudyrwxtxlkz/Build/Products/Debug-iphoneos/include/WonderPushStatic",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WonderPushDemo;
 				PROVISIONING_PROFILE = "0e6b9969-b569-4865-a648-e7ba9c600972";
 			};
 			name = Release;
@@ -385,7 +385,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A1B8509519DC05FE00D1B6FB /* Build configuration list for PBXProject "WonderpushDemo" */ = {
+		A1B8509519DC05FE00D1B6FB /* Build configuration list for PBXProject "WonderPushDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A1B850BB19DC05FF00D1B6FB /* Debug */,
@@ -394,7 +394,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A1B850BD19DC05FF00D1B6FB /* Build configuration list for PBXNativeTarget "WonderpushDemo" */ = {
+		A1B850BD19DC05FF00D1B6FB /* Build configuration list for PBXNativeTarget "WonderPushDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A1B850BE19DC05FF00D1B6FB /* Debug */,
