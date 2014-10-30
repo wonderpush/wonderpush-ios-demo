@@ -352,7 +352,7 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = WonderPushDemo;
-				PROVISIONING_PROFILE = "0e6b9969-b569-4865-a648-e7ba9c600972";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -378,7 +378,7 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = WonderPushDemo;
-				PROVISIONING_PROFILE = "0e6b9969-b569-4865-a648-e7ba9c600972";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
