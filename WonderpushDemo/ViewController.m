@@ -35,16 +35,12 @@ static NSArray* cellConfiguration;
                             @"bgColor": [UIColor colorWithRed:  0/255. green:153/255. blue:102/255. alpha:1.0]},
                           @{@"title":@"INACTIVE USER",    @"event":@"inactivity",
                             @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]}];
-    // Do any additional setup after loading the view, typically from a nib.
+
     [[NSNotificationCenter defaultCenter] addObserverForName:WP_NOTIFICATION_INITIALIZED object:nil queue:nil usingBlock:^(NSNotification *note) {
         [self setTitle:@"SIMULATE AN EVENT BELOW"];
     }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma TABLE VIEW DATASOURCE METHODS 
 
@@ -85,42 +81,11 @@ static NSArray* cellConfiguration;
     [cell setSelected:NO];
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
     return [cellConfiguration count];
 }
-
-
-//- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
-//{
-//    return @[@"test"];
-//}
-
-//- (NSInteger)tableView:(UITableView *)tableView
-//sectionForSectionIndexTitle:(NSString *)title
-//               atIndex:(NSInteger)index
-//{
-//    
-//}
-//
-//
-//- (NSString *)tableView:(UITableView *)tableView
-//titleForHeaderInSection:(NSInteger)section
-//{
-//    
-//}
-//
-//- (NSString *)tableView:(UITableView *)tableView
-//titleForFooterInSection:(NSInteger)section
-//{
-//    
-//}
 
 @end
 
