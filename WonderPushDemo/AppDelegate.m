@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  WonderpushDemo
+//  WonderPushDemo
 //
 //  Created by YAKAZ on 01/10/14.
 //  Copyright (c) 2014 WonderPush. All rights reserved.

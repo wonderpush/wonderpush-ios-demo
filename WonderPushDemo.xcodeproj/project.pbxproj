@@ -87,7 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				A1E3E11019E5B26700A4EE09 /* Frameworks */,
-				A1B8509C19DC05FE00D1B6FB /* WonderpushDemo */,
+				A1B8509C19DC05FE00D1B6FB /* WonderPushDemo */,
 				A1B8509B19DC05FE00D1B6FB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,7 +100,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A1B8509C19DC05FE00D1B6FB /* WonderpushDemo */ = {
+		A1B8509C19DC05FE00D1B6FB /* WonderPushDemo */ = {
 			isa = PBXGroup;
 			children = (
 				A1B850A119DC05FE00D1B6FB /* AppDelegate.h */,
@@ -112,7 +112,7 @@
 				A1B850AC19DC05FF00D1B6FB /* LaunchScreen.xib */,
 				A1B8509D19DC05FE00D1B6FB /* Supporting Files */,
 			);
-			path = WonderpushDemo;
+			path = WonderPushDemo;
 			sourceTree = "<group>";
 		};
 		A1B8509D19DC05FE00D1B6FB /* Supporting Files */ = {
@@ -159,7 +159,7 @@
 			dependencies = (
 			);
 			name = WonderPushDemo;
-			productName = WonderpushDemo;
+			productName = WonderPushDemo;
 			productReference = A1B8509A19DC05FE00D1B6FB /* WonderPushDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -343,7 +343,7 @@
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/wonderpush-ekklskbdxlzpzsfdnudyrwxtxlkz/Build/Intermediates/ArchiveIntermediates/WonderPushFramework",
 					/Users/Yakaz/Downloads,
 				);
-				INFOPLIST_FILE = WonderpushDemo/Info.plist;
+				INFOPLIST_FILE = WonderPushDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -370,7 +370,7 @@
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/wonderpush-ekklskbdxlzpzsfdnudyrwxtxlkz/Build/Intermediates/ArchiveIntermediates/WonderPushFramework",
 					/Users/Yakaz/Downloads,
 				);
-				INFOPLIST_FILE = WonderpushDemo/Info.plist;
+				INFOPLIST_FILE = WonderPushDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

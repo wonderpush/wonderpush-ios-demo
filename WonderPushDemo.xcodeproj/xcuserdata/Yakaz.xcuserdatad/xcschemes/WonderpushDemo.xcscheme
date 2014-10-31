@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0600"
+   LastUpgradeVersion = "0610"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A1B8509919DC05FE00D1B6FB"
-               BuildableName = "WonderPush Demo.app"
+               BuildableName = "WonderPushDemo.app"
                BlueprintName = "WonderPushDemo"
                ReferencedContainer = "container:WonderPushDemo.xcodeproj">
             </BuildableReference>
@@ -29,8 +29,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A1B850B219DC05FF00D1B6FB"
-               BuildableName = "WonderpushDemoTests.xctest"
-               BlueprintName = "WonderpushDemoTests"
+               BuildableName = "WonderPushDemoTests.xctest"
+               BlueprintName = "WonderPushDemoTests"
                ReferencedContainer = "container:WonderPushDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -61,8 +61,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A1B850B219DC05FF00D1B6FB"
-               BuildableName = "WonderpushDemoTests.xctest"
-               BlueprintName = "WonderpushDemoTests"
+               BuildableName = "WonderPushDemoTests.xctest"
+               BlueprintName = "WonderPushDemoTests"
                ReferencedContainer = "container:WonderPushDemo.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -81,7 +81,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A1B8509919DC05FE00D1B6FB"
-            BuildableName = "WonderPush Demo.app"
+            BuildableName = "WonderPushDemo.app"
             BlueprintName = "WonderPushDemo"
             ReferencedContainer = "container:WonderPushDemo.xcodeproj">
          </BuildableReference>
@@ -100,7 +100,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A1B8509919DC05FE00D1B6FB"
-            BuildableName = "WonderPush Demo.app"
+            BuildableName = "WonderPushDemo.app"
             BlueprintName = "WonderPushDemo"
             ReferencedContainer = "container:WonderPushDemo.xcodeproj">
          </BuildableReference>
@@ -118,7 +118,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A1B8509919DC05FE00D1B6FB"
-            BuildableName = "WonderPush Demo.app"
+            BuildableName = "WonderPushDemo.app"
             BlueprintName = "WonderPushDemo"
             ReferencedContainer = "container:WonderPushDemo.xcodeproj">
          </BuildableReference>
