@@ -16,6 +16,7 @@
 @implementation ViewController
 
 static NSArray* cellConfiguration;
+static CGFloat cellHeight;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,6 +37,13 @@ static NSArray* cellConfiguration;
                           @{@"title":@"INACTIVE USER",    @"event":@"inactivity",
                             @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]}];
 
+    cellHeight = (self.tableView.frame.size.height
+                  - self.navigationController.navigationBar.frame.size.height
+                  - [UIApplication sharedApplication].statusBarFrame.size.height
+                  ) / [cellConfiguration count];
+    if (cellHeight < 44)
+        cellHeight = 44;
+
     [[NSNotificationCenter defaultCenter] addObserverForName:WP_NOTIFICATION_INITIALIZED object:nil queue:nil usingBlock:^(NSNotification *note) {
         [self setTitle:@"SIMULATE AN EVENT BELOW"];
     }];
@@ -51,7 +59,7 @@ static NSArray* cellConfiguration;
     UILabel *myLabel;
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle  reuseIdentifier:@"cell"];
-        cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, 65.f);
+        cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, tableView.frame.size.width, cellHeight);
         myLabel = [[UILabel alloc] initWithFrame:cell.frame];
         myLabel.tag = 111;
         myLabel.textAlignment= NSTextAlignmentCenter;
@@ -68,7 +76,7 @@ static NSArray* cellConfiguration;
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 65.f;
+    return cellHeight;
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
