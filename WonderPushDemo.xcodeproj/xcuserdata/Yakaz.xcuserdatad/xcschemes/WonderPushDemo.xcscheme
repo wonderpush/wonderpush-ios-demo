@@ -20,34 +20,6 @@
                ReferencedContainer = "container:WonderPushDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A1B850B219DC05FF00D1B6FB"
-               BuildableName = "WonderPushDemoTests.xctest"
-               BlueprintName = "WonderPushDemoTests"
-               ReferencedContainer = "container:WonderPushDemo.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A1E3E06819E4237A00A4EE09"
-               BuildableName = "WonderPushTests.xctest"
-               BlueprintName = "WonderPushTests"
-               ReferencedContainer = "container:WonderPushDemo.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -56,26 +28,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A1B850B219DC05FF00D1B6FB"
-               BuildableName = "WonderPushDemoTests.xctest"
-               BlueprintName = "WonderPushDemoTests"
-               ReferencedContainer = "container:WonderPushDemo.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A1E3E06819E4237A00A4EE09"
-               BuildableName = "WonderPushTests.xctest"
-               BlueprintName = "WonderPushTests"
-               ReferencedContainer = "container:WonderPushDemo.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
