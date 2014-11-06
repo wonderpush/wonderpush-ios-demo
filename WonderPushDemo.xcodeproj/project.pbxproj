@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1272C691A0A8F36005A11C1 /* libWonderPushStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E3E10D19E5B25700A4EE09 /* libWonderPushStatic.a */; };
 		A1B850A019DC05FE00D1B6FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B8509F19DC05FE00D1B6FB /* main.m */; };
 		A1B850A319DC05FE00D1B6FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B850A219DC05FE00D1B6FB /* AppDelegate.m */; };
 		A1B850A619DC05FE00D1B6FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B850A519DC05FE00D1B6FB /* ViewController.m */; };
@@ -22,7 +23,6 @@
 		A1E3E10619E5903C00A4EE09 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E3E10519E5903C00A4EE09 /* CoreBluetooth.framework */; };
 		A1E3E10819E5904200A4EE09 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E3E10719E5904200A4EE09 /* AVFoundation.framework */; };
 		A1E3E10A19E5904800A4EE09 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E3E10919E5904800A4EE09 /* CoreMotion.framework */; };
-		A1E3E10F19E5B25700A4EE09 /* libWonderPushStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E3E10D19E5B25700A4EE09 /* libWonderPushStatic.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,9 +67,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1272C691A0A8F36005A11C1 /* libWonderPushStatic.a in Frameworks */,
 				A1E3E10A19E5904800A4EE09 /* CoreMotion.framework in Frameworks */,
 				A1E3E10819E5904200A4EE09 /* AVFoundation.framework in Frameworks */,
-				A1E3E10F19E5B25700A4EE09 /* libWonderPushStatic.a in Frameworks */,
 				A1E3E10619E5903C00A4EE09 /* CoreBluetooth.framework in Frameworks */,
 				A1E3E10419E5903500A4EE09 /* CoreLocation.framework in Frameworks */,
 				A1E3E10219E5902700A4EE09 /* CoreTelephony.framework in Frameworks */,
@@ -283,7 +283,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "0e6b9969-b569-4865-a648-e7ba9c600972";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -323,7 +322,6 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "0e6b9969-b569-4865-a648-e7ba9c600972";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -336,7 +334,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/wonderpush-ekklskbdxlzpzsfdnudyrwxtxlkz/Build/Products/Debug-iphoneos",
@@ -353,7 +350,6 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = WonderPushDemo;
-				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -363,7 +359,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/wonderpush-ekklskbdxlzpzsfdnudyrwxtxlkz/Build/Products/Debug-iphoneos",
@@ -380,7 +375,6 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = WonderPushDemo;
-				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
