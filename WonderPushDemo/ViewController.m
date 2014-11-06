@@ -44,9 +44,13 @@ static CGFloat cellHeight;
     if (cellHeight < 44)
         cellHeight = 44;
 
-    [[NSNotificationCenter defaultCenter] addObserverForName:WP_NOTIFICATION_INITIALIZED object:nil queue:nil usingBlock:^(NSNotification *note) {
+    if ([WonderPush isReady]) {
         [self setTitle:@"SIMULATE AN EVENT BELOW"];
-    }];
+    } else {
+        [[NSNotificationCenter defaultCenter] addObserverForName:WP_NOTIFICATION_INITIALIZED object:nil queue:nil usingBlock:^(NSNotification *note) {
+            [self setTitle:@"SIMULATE AN EVENT BELOW"];
+        }];
+    }
 }
 
 
