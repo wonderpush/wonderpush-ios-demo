@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "WonderPush_public.h"
+#import <WonderPush/WonderPush.h>
 
 @interface ViewController ()
 

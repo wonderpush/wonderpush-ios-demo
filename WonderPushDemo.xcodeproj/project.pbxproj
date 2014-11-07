@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A1272C691A0A8F36005A11C1 /* libWonderPushStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E3E10D19E5B25700A4EE09 /* libWonderPushStatic.a */; };
+		A1272C6C1A0BC017005A11C1 /* WonderPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1272C6B1A0BC017005A11C1 /* WonderPush.framework */; };
 		A1B850A019DC05FE00D1B6FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B8509F19DC05FE00D1B6FB /* main.m */; };
 		A1B850A319DC05FE00D1B6FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B850A219DC05FE00D1B6FB /* AppDelegate.m */; };
 		A1B850A619DC05FE00D1B6FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B850A519DC05FE00D1B6FB /* ViewController.m */; };
@@ -25,20 +25,8 @@
 		A1E3E10A19E5904800A4EE09 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E3E10919E5904800A4EE09 /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		A1E3E05919E4221900A4EE09 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		A1272C6B1A0BC017005A11C1 /* WonderPush.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WonderPush.framework; sourceTree = "<group>"; };
 		A1B8509A19DC05FE00D1B6FB /* WonderPushDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WonderPushDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B8509E19DC05FE00D1B6FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1B8509F19DC05FE00D1B6FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -58,8 +46,6 @@
 		A1E3E10519E5903C00A4EE09 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		A1E3E10719E5904200A4EE09 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A1E3E10919E5904800A4EE09 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		A1E3E10D19E5B25700A4EE09 /* libWonderPushStatic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWonderPushStatic.a; sourceTree = "<group>"; };
-		A1E3E10E19E5B25700A4EE09 /* WonderPush_public.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WonderPush_public.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +53,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1272C691A0A8F36005A11C1 /* libWonderPushStatic.a in Frameworks */,
 				A1E3E10A19E5904800A4EE09 /* CoreMotion.framework in Frameworks */,
 				A1E3E10819E5904200A4EE09 /* AVFoundation.framework in Frameworks */,
 				A1E3E10619E5903C00A4EE09 /* CoreBluetooth.framework in Frameworks */,
@@ -75,6 +60,7 @@
 				A1E3E10219E5902700A4EE09 /* CoreTelephony.framework in Frameworks */,
 				A1E3E10019E5901F00A4EE09 /* UIKit.framework in Frameworks */,
 				A1E3E0FE19E5901900A4EE09 /* CoreGraphics.framework in Frameworks */,
+				A1272C6C1A0BC017005A11C1 /* WonderPush.framework in Frameworks */,
 				A1E3E0FC19E5901300A4EE09 /* MobileCoreServices.framework in Frameworks */,
 				A1E3E0FA19E5900B00A4EE09 /* SystemConfiguration.framework in Frameworks */,
 			);
@@ -127,8 +113,7 @@
 		A1E3E11019E5B26700A4EE09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A1E3E10D19E5B25700A4EE09 /* libWonderPushStatic.a */,
-				A1E3E10E19E5B25700A4EE09 /* WonderPush_public.h */,
+				A1272C6B1A0BC017005A11C1 /* WonderPush.framework */,
 				A1E3E10919E5904800A4EE09 /* CoreMotion.framework */,
 				A1E3E10719E5904200A4EE09 /* AVFoundation.framework */,
 				A1E3E10519E5903C00A4EE09 /* CoreBluetooth.framework */,
@@ -152,7 +137,6 @@
 				A1B8509619DC05FE00D1B6FB /* Sources */,
 				A1B8509719DC05FE00D1B6FB /* Frameworks */,
 				A1B8509819DC05FE00D1B6FB /* Resources */,
-				A1E3E05919E4221900A4EE09 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -276,11 +260,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)/**",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -316,11 +296,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)/**",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -336,19 +312,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/wonderpush-ekklskbdxlzpzsfdnudyrwxtxlkz/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/wonderpush-ekklskbdxlzpzsfdnudyrwxtxlkz/Build/Intermediates/ArchiveIntermediates/WonderPushFramework",
-					/Users/Yakaz/Downloads,
-				);
-				INFOPLIST_FILE = WonderPushDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/wonderpush-ekklskbdxlzpzsfdnudyrwxtxlkz/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/wonderpush-ekklskbdxlzpzsfdnudyrwxtxlkz/Build/Products/Debug-iphoneos/include/WonderPushStatic",
 					"$(PROJECT_DIR)",
 				);
+				INFOPLIST_FILE = WonderPushDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = WonderPushDemo;
 			};
 			name = Debug;
@@ -361,19 +328,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/wonderpush-ekklskbdxlzpzsfdnudyrwxtxlkz/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/wonderpush-ekklskbdxlzpzsfdnudyrwxtxlkz/Build/Intermediates/ArchiveIntermediates/WonderPushFramework",
-					/Users/Yakaz/Downloads,
-				);
-				INFOPLIST_FILE = WonderPushDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/wonderpush-ekklskbdxlzpzsfdnudyrwxtxlkz/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/wonderpush-ekklskbdxlzpzsfdnudyrwxtxlkz/Build/Products/Debug-iphoneos/include/WonderPushStatic",
 					"$(PROJECT_DIR)",
 				);
+				INFOPLIST_FILE = WonderPushDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = WonderPushDemo;
 			};
 			name = Release;
