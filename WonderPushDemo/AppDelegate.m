@@ -68,6 +68,7 @@
 - (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
 {
     NSLog(@"Error: %@", error);
+    [WonderPush didFailToRegisterForRemoteNotificationsWithError:error];
 }
 
 -(void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
