@@ -43,18 +43,30 @@ static CGFloat cellHeight;
                   ) / [cellConfiguration count];
     if (cellHeight < 44)
         cellHeight = 44;
+}
 
+- (void)viewDidAppear:(BOOL)animated
+{
     if ([WonderPush isReady]) {
-        [self setTitle:@"SIMULATE AN EVENT BELOW"];
+        [self updateTitle];
     } else {
         [[NSNotificationCenter defaultCenter] addObserverForName:WP_NOTIFICATION_INITIALIZED object:nil queue:nil usingBlock:^(NSNotification *note) {
-            [self setTitle:@"SIMULATE AN EVENT BELOW"];
+            [self updateTitle];
         }];
     }
 }
 
+- (void) updateTitle
+{
+    if ([WonderPush getNotificationEnabled] == YES) {
+        [self setTitle:@"SIMULATE AN EVENT BELOW"];
+    } else {
+        [self setTitle:@"(Push disabled)"];
+    }
+}
 
-#pragma TABLE VIEW DATASOURCE METHODS 
+
+#pragma TABLE VIEW DATASOURCE METHODS
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath

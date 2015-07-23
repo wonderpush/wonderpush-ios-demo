@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DBC92C41B5FC2BC00E07FB8 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBC92C31B5FC2BC00E07FB8 /* SettingsViewController.m */; };
 		A1272C6C1A0BC017005A11C1 /* WonderPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1272C6B1A0BC017005A11C1 /* WonderPush.framework */; };
 		A1B850A019DC05FE00D1B6FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B8509F19DC05FE00D1B6FB /* main.m */; };
 		A1B850A319DC05FE00D1B6FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B850A219DC05FE00D1B6FB /* AppDelegate.m */; };
@@ -26,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3DBC92C21B5FC2BC00E07FB8 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		3DBC92C31B5FC2BC00E07FB8 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		A1272C6B1A0BC017005A11C1 /* WonderPush.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WonderPush.framework; sourceTree = "<group>"; };
 		A1B8509A19DC05FE00D1B6FB /* WonderPushDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WonderPushDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B8509E19DC05FE00D1B6FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 		A1B8509C19DC05FE00D1B6FB /* WonderPushDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3DBC92C21B5FC2BC00E07FB8 /* SettingsViewController.h */,
+				3DBC92C31B5FC2BC00E07FB8 /* SettingsViewController.m */,
 				A1B850A119DC05FE00D1B6FB /* AppDelegate.h */,
 				A1B850A219DC05FE00D1B6FB /* AppDelegate.m */,
 				A1B850A419DC05FE00D1B6FB /* ViewController.h */,
@@ -201,6 +206,7 @@
 				A1B850A619DC05FE00D1B6FB /* ViewController.m in Sources */,
 				A1B850A319DC05FE00D1B6FB /* AppDelegate.m in Sources */,
 				A1B850A019DC05FE00D1B6FB /* main.m in Sources */,
+				3DBC92C41B5FC2BC00E07FB8 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
