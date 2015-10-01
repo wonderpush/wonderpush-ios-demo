@@ -35,6 +35,10 @@ static CGFloat cellHeight;
                           @{@"title":@"GEOFENCING",       @"event":@"geofencing",
                             @"bgColor": [UIColor colorWithRed:  0/255. green:153/255. blue:102/255. alpha:1.0]},
                           @{@"title":@"INACTIVE USER",    @"event":@"inactivity",
+                            @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]},
+                          @{@"title":@"SEX: MALE",        @"data":@{@"string_sex":@"male"},
+                            @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]},
+                          @{@"title":@"SEX: FEMALE",      @"data":@{@"string_sex":@"female"},
                             @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]}];
 
     cellHeight = (self.tableView.frame.size.height
@@ -100,7 +104,11 @@ static CGFloat cellHeight;
     id cellConf = [cellConfiguration objectAtIndex:[indexPath row]];
     id type = [cellConf valueForKey:@"event"];
     id data = [cellConf valueForKey:@"data"];
-    [WonderPush trackEvent:type withData:data];
+    if (type == nil) {
+        [WonderPush putInstallationCustomProperties:data];
+    } else {
+        [WonderPush trackEvent:type withData:data];
+    }
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     [cell setSelected:NO];
 }
