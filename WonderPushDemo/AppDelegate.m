@@ -18,11 +18,14 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [WonderPush setLogging:YES];
     [WonderPush setClientId:@"7524c8a317c1794c0b23895dce3a3314d6a24105" secret:@"b43a2d0fbdb54d24332b4d70736954eab5d24d29012b18ef6d214ff0f51e7901"];
-    [WonderPush handleApplicationLaunchWithOption:launchOptions];
+    [WonderPush setupDelegateForApplication:application];
+    return YES;
+}
 
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Register an example method
     [[NSNotificationCenter defaultCenter] addObserverForName:@"example" object:nil queue:nil usingBlock:^(NSNotification *note) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"The example method was called"
@@ -52,37 +55,6 @@
     }];
 
     return YES;
-}
-
-- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
-{
-    [WonderPush handleNotification:notification.userInfo];
-}
-
-
--(void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
-{
-    [WonderPush didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
-}
-
-- (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
-{
-    NSLog(@"Error: %@", error);
-    [WonderPush didFailToRegisterForRemoteNotificationsWithError:error];
-}
-
--(void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
-{
-    [WonderPush handleDidReceiveRemoteNotification:userInfo];
-}
-
-
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    [WonderPush applicationDidEnterBackground:application];
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    [WonderPush applicationDidBecomeActive:application];
 }
 
 @end
