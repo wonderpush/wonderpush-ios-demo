@@ -163,6 +163,11 @@
 					A1B8509919DC05FE00D1B6FB = {
 						CreatedOnToolsVersion = 6.0.1;
 						DevelopmentTeam = N9ZG2P9A72;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
