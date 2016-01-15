@@ -40,8 +40,12 @@ static CGFloat cellHeight;
                             @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]},
                           @{@"title":@"SEX: FEMALE",      @"data":@{@"string_sex":@"female"},
                             @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]}];
+    [self calculateNewCellHeightForSize:self.tableView.frame.size];
+}
 
-    cellHeight = (self.tableView.frame.size.height
+- (void)calculateNewCellHeightForSize:(CGSize)size
+{
+    cellHeight = (size.height
                   - self.navigationController.navigationBar.frame.size.height
                   - [UIApplication sharedApplication].statusBarFrame.size.height
                   ) / [cellConfiguration count];
@@ -58,6 +62,18 @@ static CGFloat cellHeight;
             [self updateTitle];
         }];
     }
+}
+
+- (BOOL)shouldAutorotate
+{
+    return YES;
+}
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    [self calculateNewCellHeightForSize:size];
+    [self.tableView reloadData];
 }
 
 - (void) updateTitle
@@ -77,7 +93,7 @@ static CGFloat cellHeight;
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     UILabel *myLabel;
-    if (cell == nil) {
+    if (cell == nil || cell.frame.size.width != tableView.frame.size.width || cell.frame.size.height != cellHeight) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle  reuseIdentifier:@"cell"];
         cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, tableView.frame.size.width, cellHeight);
         myLabel = [[UILabel alloc] initWithFrame:cell.frame];
