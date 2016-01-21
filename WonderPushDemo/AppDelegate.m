@@ -54,6 +54,13 @@
         }
     }];
 
+    self.locationManager = [CLLocationManager new];
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    BOOL geolocation = [[NSUserDefaults standardUserDefaults] boolForKey:@"geolocation"];
+    if (geolocation) {
+        [self.locationManager startUpdatingLocation];
+    }
+
     return YES;
 }
 

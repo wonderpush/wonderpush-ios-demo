@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rlt-kU-HPt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rlt-kU-HPt">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -39,8 +39,10 @@
                             <tableViewSection headerTitle="Preferences" id="FxZ-zQ-gkw">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Xrh-hu-uwn">
+                                        <rect key="frame" x="0.0" y="114" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xrh-hu-uwn" id="LVY-Uk-ksl">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable push notifications" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l31-JC-R6I">
@@ -65,6 +67,35 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bpZ-Lp-UJi">
+                                        <rect key="frame" x="0.0" y="158" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bpZ-Lp-UJi" id="0c5-bT-x47">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable geolocation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idQ-fs-PJ1">
+                                                    <rect key="frame" x="8" y="11" width="527" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KJp-2e-Hhf">
+                                                    <rect key="frame" x="543" y="6" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="swtEnableGeolocation_valueChange:" destination="bUI-z9-OHb" eventType="valueChanged" id="71e-zy-kZG"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="KJp-2e-Hhf" secondAttribute="centerY" id="8F9-vn-qOi"/>
+                                                <constraint firstItem="idQ-fs-PJ1" firstAttribute="leading" secondItem="0c5-bT-x47" secondAttribute="leadingMargin" id="joc-p2-dSP"/>
+                                                <constraint firstItem="KJp-2e-Hhf" firstAttribute="leading" secondItem="idQ-fs-PJ1" secondAttribute="trailing" constant="8" id="qK7-oU-fZV"/>
+                                                <constraint firstItem="KJp-2e-Hhf" firstAttribute="trailing" secondItem="0c5-bT-x47" secondAttribute="trailingMargin" id="y6p-Kz-Ycs"/>
+                                                <constraint firstAttribute="centerY" secondItem="idQ-fs-PJ1" secondAttribute="centerY" id="zBI-ph-Hup"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -74,6 +105,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="swtEnableGeolocation" destination="KJp-2e-Hhf" id="mRw-QP-R1n"/>
                         <outlet property="swtEnableNotifications" destination="Rpm-QF-2Px" id="ICn-ay-KCT"/>
                     </connections>
                 </tableViewController>

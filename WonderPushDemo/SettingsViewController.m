@@ -7,11 +7,13 @@
 //
 
 #import "SettingsViewController.h"
+#import "AppDelegate.h"
 #import <WonderPush/WonderPush.h>
 
 @interface SettingsViewController ()
 
 @property (nonatomic) IBOutlet id swtEnableNotifications;
+@property (nonatomic) IBOutlet id swtEnableGeolocation;
 
 @end
 
@@ -22,12 +24,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    BOOL geolocation = [[NSUserDefaults standardUserDefaults] boolForKey:@"geolocation"];
+    [self.swtEnableGeolocation setOn:geolocation];
+
     if ([WonderPush isReady]) {
         [self loadSettings];
     } else {
-        [swtEnableNotifications setEnabled:NO];
+        [self.swtEnableNotifications setEnabled:NO];
         [[NSNotificationCenter defaultCenter] addObserverForName:WP_NOTIFICATION_INITIALIZED object:nil queue:nil usingBlock:^(NSNotification *note) {
-            [swtEnableNotifications setEnabled:YES];
+            [self.swtEnableNotifications setEnabled:YES];
             [self loadSettings];
         }];
     }
@@ -35,12 +40,23 @@
 
 - (void) loadSettings
 {
-    [swtEnableNotifications setOn:[WonderPush getNotificationEnabled]];
+    [self.swtEnableNotifications setOn:[WonderPush getNotificationEnabled]];
 }
 
 - (IBAction) swtEnableNotifications_valueChange:(id)sender
 {
-    [WonderPush setNotificationEnabled:[swtEnableNotifications isOn]];
+    [WonderPush setNotificationEnabled:[self.swtEnableNotifications isOn]];
+}
+
+- (IBAction) swtEnableGeolocation_valueChange:(id)sender
+{
+    CLLocationManager *locationManager = (CLLocationManager *)((AppDelegate *)[UIApplication sharedApplication].delegate).locationManager;
+    [[NSUserDefaults standardUserDefaults] setBool:[self.swtEnableNotifications isOn] forKey:@"geolocation"];
+    if ([self.swtEnableNotifications isOn]) {
+        [locationManager startUpdatingLocation];
+    } else {
+        [locationManager stopUpdatingLocation];
+    }
 }
 
 @end
