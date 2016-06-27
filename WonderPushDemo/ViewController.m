@@ -28,7 +28,7 @@ static CGFloat cellHeight;
                             @"bgColor": [UIColor colorWithRed:99/255.  green:192/255. blue:242/255. alpha:1.0]},
                           @{@"title":@"LIKE",             @"event":@"like",
                             @"bgColor": [UIColor colorWithRed:172/255. green:217/255. blue:228/255. alpha:1.0]},
-                          @{@"title":@"ADD TO CART",      @"event":@"addToCart",
+                          @{@"title":@"ADD TO CART",      @"event":@"addToCart", @"data": @{@"float_amount": @14.99},
                             @"bgColor": [UIColor colorWithRed:149/255. green:149/255. blue:149/255. alpha:1.0]},
                           @{@"title":@"PURCHASE",         @"event":@"purchase",
                             @"bgColor": [UIColor colorWithRed: 51/255. green: 51/255. blue: 51/255. alpha:1.0]},
