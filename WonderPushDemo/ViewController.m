@@ -85,6 +85,15 @@ static CGFloat cellHeight;
     }
 }
 
+- (IBAction)readInstallationCustomProperties:(id)sender
+{
+    NSDictionary *custom = [WonderPush getInstallationCustomProperties];
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:custom options:0 error:&error];
+    NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Install custom properties" message:jsonStr delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil];
+    [alert show];
+}
 
 #pragma TABLE VIEW DATASOURCE METHODS
 

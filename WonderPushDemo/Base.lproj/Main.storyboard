@@ -16,6 +16,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tableView>
                     <navigationItem key="navigationItem" title="CONNECTING TO WONDERPUSH…" id="qGD-08-b2n">
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="4E4-s4-Mq8">
+                            <connections>
+                                <action selector="readInstallationCustomProperties:" destination="BYZ-38-t0r" id="fdf-Pv-0Yx"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="xHu-Yr-THp">
                             <connections>
                                 <segue destination="bUI-z9-OHb" kind="show" id="eyd-en-iHm"/>

@@ -10,6 +10,6 @@
 
 @interface ViewController : UITableViewController
 
+- (IBAction)readInstallationCustomProperties:(id)sender;
 
 @end
-
