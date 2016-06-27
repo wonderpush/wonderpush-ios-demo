@@ -64,4 +64,18 @@
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    NSLog(@"application: openURL:%@ sourceApplication:%@ annotation:%@", url, sourceApplication, annotation);
+    [[[UIAlertView alloc] initWithTitle:@"Deep link" message:[url absoluteString] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options
+{
+    NSLog(@"application: openURL:%@ options:%@", url, options);
+    [[[UIAlertView alloc] initWithTitle:@"Deep link" message:[url absoluteString] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    return YES;
+}
+
 @end
