@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "Alert"; ObjectID = "AKw-lC-iLy"; */
+"AKw-lC-iLy.text" = "Hinweise";
+
+/* Class = "UITableViewSection"; headerTitle = "Preferences"; ObjectID = "FxZ-zQ-gkw"; */
+"FxZ-zQ-gkw.headerTitle" = "Einstellungen";
+
+/* Class = "UITableViewSection"; headerTitle = "Notification types"; ObjectID = "K8Q-j0-30t"; */
+"K8Q-j0-30t.headerTitle" = "Mitteilungsstil";
+
+/* Class = "UITableViewController"; title = "Settings"; ObjectID = "bUI-z9-OHb"; */
+"bUI-z9-OHb.title" = "Einstellungen";
+
+/* Class = "UITextField"; placeholder = "No user id"; ObjectID = "cIN-N0-brY"; */
+"cIN-N0-brY.placeholder" = "Kein user id";
+
+/* Class = "UIButton"; normalTitle = "Unregister"; ObjectID = "i2L-FR-kmP"; */
+"i2L-FR-kmP.normalTitle" = "Deregistrieren";
+
+/* Class = "UILabel"; text = "Enable geolocation"; ObjectID = "idQ-fs-PJ1"; */
+"idQ-fs-PJ1.text" = "Erlauben Ortungsdienste";
+
+/* Class = "UILabel"; text = "User id"; ObjectID = "k7Y-Td-qfJ"; */
+"k7Y-Td-qfJ.text" = "User id";
+
+/* Class = "UILabel"; text = "Enable push notifications"; ObjectID = "l31-JC-R6I"; */
+"l31-JC-R6I.text" = "Erlauben Mitteilungen";
+
+/* Class = "UILabel"; text = "Sound"; ObjectID = "oIW-UX-1Wv"; */
+"oIW-UX-1Wv.text" = "Töne";
+
+/* Class = "UINavigationItem"; title = "CONNECTING TO WONDERPUSH…"; ObjectID = "qGD-08-b2n"; */
+"qGD-08-b2n.title" = "CONNECTING TO WONDERPUSH…";
+
+/* Class = "UILabel"; text = "Badge"; ObjectID = "uia-72-K8m"; */
+"uia-72-K8m.text" = "Kennzeichensymbol";

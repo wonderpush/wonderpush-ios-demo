@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0A086C1D340001001289BD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D0A086E1D340001001289BD /* Localizable.strings */; };
 		3DBC92C41B5FC2BC00E07FB8 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBC92C31B5FC2BC00E07FB8 /* SettingsViewController.m */; };
 		A1B850A019DC05FE00D1B6FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B8509F19DC05FE00D1B6FB /* main.m */; };
 		A1B850A319DC05FE00D1B6FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B850A219DC05FE00D1B6FB /* AppDelegate.m */; };
@@ -18,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D0A08691D33FB5E001289BD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		3D0A086D1D340001001289BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3D0A086F1D340003001289BD /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3D0A08701D340004001289BD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3D7879D51D32BC05007C1675 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		3DBC92C21B5FC2BC00E07FB8 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		3DBC92C31B5FC2BC00E07FB8 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		83D44299CE17F8B4D7BE8740 /* Pods-WonderPushDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WonderPushDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WonderPushDemo/Pods-WonderPushDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +112,7 @@
 			children = (
 				A1B8509E19DC05FE00D1B6FB /* Info.plist */,
 				A1B8509F19DC05FE00D1B6FB /* main.m */,
+				3D0A086E1D340001001289BD /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -181,6 +188,8 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				fr,
 			);
 			mainGroup = A1B8509119DC05FE00D1B6FB;
 			productRefGroup = A1B8509B19DC05FE00D1B6FB /* Products */;
@@ -198,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1B850A919DC05FE00D1B6FB /* Main.storyboard in Resources */,
+				3D0A086C1D340001001289BD /* Localizable.strings in Resources */,
 				A1B850AE19DC05FF00D1B6FB /* LaunchScreen.xib in Resources */,
 				A1B850AB19DC05FF00D1B6FB /* Images.xcassets in Resources */,
 			);
@@ -268,10 +278,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		3D0A086E1D340001001289BD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D0A086D1D340001001289BD /* Base */,
+				3D0A086F1D340003001289BD /* fr */,
+				3D0A08701D340004001289BD /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		A1B850A719DC05FE00D1B6FB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A1B850A819DC05FE00D1B6FB /* Base */,
+				3D7879D51D32BC05007C1675 /* fr */,
+				3D0A08691D33FB5E001289BD /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
