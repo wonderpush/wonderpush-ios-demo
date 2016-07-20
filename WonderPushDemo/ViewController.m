@@ -105,7 +105,9 @@ static CGFloat cellHeight;
     if (cell == nil || cell.frame.size.width != tableView.frame.size.width || cell.frame.size.height != cellHeight) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle  reuseIdentifier:@"cell"];
         cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, tableView.frame.size.width, cellHeight);
+        cell.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         myLabel = [[UILabel alloc] initWithFrame:cell.frame];
+        myLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         myLabel.tag = 111;
         myLabel.textAlignment= NSTextAlignmentCenter;
         myLabel.textColor = [UIColor colorWithWhite:1.0f alpha:1.0f];
