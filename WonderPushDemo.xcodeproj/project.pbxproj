@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32B23C4110E8C9E8729AA4E4 /* libPods-WonderPushNotificationServiceExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 930905D5245BBC1D4B5CF8D5 /* libPods-WonderPushNotificationServiceExtension.a */; };
 		3D0A92871EB1E63C00784273 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A92861EB1E63C00784273 /* AppDelegate.swift */; };
 		3D0A92891EB1E63C00784273 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A92881EB1E63C00784273 /* ViewController.swift */; };
 		3D0A928C1EB1E63C00784273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D0A928A1EB1E63C00784273 /* Main.storyboard */; };
 		3D0A928E1EB1E63C00784273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D0A928D1EB1E63C00784273 /* Assets.xcassets */; };
 		3D0A92911EB1E63C00784273 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D0A928F1EB1E63C00784273 /* LaunchScreen.storyboard */; };
-		3D0A929F1EB1E70B00784273 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A929E1EB1E70B00784273 /* NotificationService.swift */; };
-		3D0A92A31EB1E70B00784273 /* WonderPushNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3D0A929C1EB1E70B00784273 /* WonderPushNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3D0A92B51EB20DA400784273 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A92B41EB20DA400784273 /* SettingsViewController.swift */; };
-		8E650F47FCDAD65351021E6C /* Pods_WonderPushDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F913B560345ADA3F048410F9 /* Pods_WonderPushDemo.framework */; };
+		3D0A92BD1EB3505500784273 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A92BC1EB3505500784273 /* NotificationService.swift */; };
+		3D0A92C11EB3505500784273 /* NotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3D0A92BA1EB3505500784273 /* NotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8FD5F3E4BEE52673EAD09088 /* libPods-NotificationServiceExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC508E56E68FA50E6650B0D7 /* libPods-NotificationServiceExtension.a */; };
+		CC05080EA99C84BDD15DDD9E /* libPods-WonderPushDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1AE82AED3C5ED4CBAF360DE /* libPods-WonderPushDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3D0A92A11EB1E70B00784273 /* PBXContainerItemProxy */ = {
+		3D0A92BF1EB3505500784273 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3D0A927B1EB1E63C00784273 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3D0A929B1EB1E70B00784273;
-			remoteInfo = WonderPushNotificationServiceExtension;
+			remoteGlobalIDString = 3D0A92B91EB3505400784273;
+			remoteInfo = NotificationServiceExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -36,7 +36,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				3D0A92A31EB1E70B00784273 /* WonderPushNotificationServiceExtension.appex in Embed App Extensions */,
+				3D0A92C11EB3505500784273 /* NotificationServiceExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,7 +44,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0047F2B80DA51A6935D3AADB /* Pods-WonderPushNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WonderPushNotificationServiceExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-WonderPushNotificationServiceExtension/Pods-WonderPushNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		3D0A92831EB1E63C00784273 /* WonderPushDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WonderPushDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D0A92861EB1E63C00784273 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D0A92881EB1E63C00784273 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,19 +51,19 @@
 		3D0A928D1EB1E63C00784273 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D0A92901EB1E63C00784273 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D0A92921EB1E63C00784273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D0A929C1EB1E70B00784273 /* WonderPushNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WonderPushNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D0A929E1EB1E70B00784273 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
-		3D0A92A01EB1E70B00784273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D0A92A81EB1E7CB00784273 /* WonderPushDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WonderPushDemo-Bridging-Header.h"; sourceTree = "<group>"; };
-		3D0A92AC1EB1EFCD00784273 /* WonderPushNotificationServiceExtension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WonderPushNotificationServiceExtension-Bridging-Header.h"; sourceTree = "<group>"; };
-		3D0A92B01EB1F4DD00784273 /* WonderPushNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WonderPushNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 		3D0A92B11EB1F51700784273 /* WonderPushDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WonderPushDemo.entitlements; sourceTree = "<group>"; };
 		3D0A92B41EB20DA400784273 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		930905D5245BBC1D4B5CF8D5 /* libPods-WonderPushNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WonderPushNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		94A33C1796778EA7F97D134A /* Pods-WonderPushNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WonderPushNotificationServiceExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WonderPushNotificationServiceExtension/Pods-WonderPushNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
-		EAF762347BACD29D0FC66ACC /* Pods-WonderPushDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WonderPushDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WonderPushDemo/Pods-WonderPushDemo.release.xcconfig"; sourceTree = "<group>"; };
-		F913B560345ADA3F048410F9 /* Pods_WonderPushDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WonderPushDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD637622255F128EBE187CD7 /* Pods-WonderPushDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WonderPushDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WonderPushDemo/Pods-WonderPushDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		3D0A92BA1EB3505500784273 /* NotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D0A92BC1EB3505500784273 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		3D0A92BE1EB3505500784273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D0A92C51EB3507100784273 /* NotificationServiceExtension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NotificationServiceExtension-Bridging-Header.h"; sourceTree = "<group>"; };
+		47F68F2FF93EC15A7035087F /* Pods-NotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationServiceExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-NotificationServiceExtension/Pods-NotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
+		89FF29147136068FD106B136 /* Pods-WonderPushDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WonderPushDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WonderPushDemo/Pods-WonderPushDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		A1AE82AED3C5ED4CBAF360DE /* libPods-WonderPushDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WonderPushDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A227AF82605654C009FF8336 /* Pods-NotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationServiceExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NotificationServiceExtension/Pods-NotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		EC508E56E68FA50E6650B0D7 /* libPods-NotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE3BE43F5E3CE8A61DCBC9F3 /* Pods-WonderPushDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WonderPushDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WonderPushDemo/Pods-WonderPushDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,15 +71,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E650F47FCDAD65351021E6C /* Pods_WonderPushDemo.framework in Frameworks */,
+				CC05080EA99C84BDD15DDD9E /* libPods-WonderPushDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3D0A92991EB1E70B00784273 /* Frameworks */ = {
+		3D0A92B71EB3505400784273 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32B23C4110E8C9E8729AA4E4 /* libPods-WonderPushNotificationServiceExtension.a in Frameworks */,
+				8FD5F3E4BEE52673EAD09088 /* libPods-NotificationServiceExtension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,10 +90,10 @@
 			isa = PBXGroup;
 			children = (
 				3D0A92851EB1E63C00784273 /* WonderPushDemo */,
-				3D0A929D1EB1E70B00784273 /* WonderPushNotificationServiceExtension */,
+				3D0A92BB1EB3505500784273 /* NotificationServiceExtension */,
 				3D0A92841EB1E63C00784273 /* Products */,
-				76C20B55C7F634E0493CC92D /* Pods */,
-				415F0573C5BF237220F461F6 /* Frameworks */,
+				745694FAF70D2B7E0D7988FE /* Pods */,
+				F39314F48CD233907F3DD2EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				3D0A92831EB1E63C00784273 /* WonderPushDemo.app */,
-				3D0A929C1EB1E70B00784273 /* WonderPushNotificationServiceExtension.appex */,
+				3D0A92BA1EB3505500784273 /* NotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,35 +122,34 @@
 			path = WonderPushDemo;
 			sourceTree = "<group>";
 		};
-		3D0A929D1EB1E70B00784273 /* WonderPushNotificationServiceExtension */ = {
+		3D0A92BB1EB3505500784273 /* NotificationServiceExtension */ = {
 			isa = PBXGroup;
 			children = (
-				3D0A92B01EB1F4DD00784273 /* WonderPushNotificationServiceExtension.entitlements */,
-				3D0A929E1EB1E70B00784273 /* NotificationService.swift */,
-				3D0A92A01EB1E70B00784273 /* Info.plist */,
-				3D0A92AC1EB1EFCD00784273 /* WonderPushNotificationServiceExtension-Bridging-Header.h */,
+				3D0A92BC1EB3505500784273 /* NotificationService.swift */,
+				3D0A92BE1EB3505500784273 /* Info.plist */,
+				3D0A92C51EB3507100784273 /* NotificationServiceExtension-Bridging-Header.h */,
 			);
-			path = WonderPushNotificationServiceExtension;
+			path = NotificationServiceExtension;
 			sourceTree = "<group>";
 		};
-		415F0573C5BF237220F461F6 /* Frameworks */ = {
+		745694FAF70D2B7E0D7988FE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F913B560345ADA3F048410F9 /* Pods_WonderPushDemo.framework */,
-				930905D5245BBC1D4B5CF8D5 /* libPods-WonderPushNotificationServiceExtension.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		76C20B55C7F634E0493CC92D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				FD637622255F128EBE187CD7 /* Pods-WonderPushDemo.debug.xcconfig */,
-				EAF762347BACD29D0FC66ACC /* Pods-WonderPushDemo.release.xcconfig */,
-				94A33C1796778EA7F97D134A /* Pods-WonderPushNotificationServiceExtension.debug.xcconfig */,
-				0047F2B80DA51A6935D3AADB /* Pods-WonderPushNotificationServiceExtension.release.xcconfig */,
+				A227AF82605654C009FF8336 /* Pods-NotificationServiceExtension.debug.xcconfig */,
+				47F68F2FF93EC15A7035087F /* Pods-NotificationServiceExtension.release.xcconfig */,
+				89FF29147136068FD106B136 /* Pods-WonderPushDemo.debug.xcconfig */,
+				FE3BE43F5E3CE8A61DCBC9F3 /* Pods-WonderPushDemo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F39314F48CD233907F3DD2EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC508E56E68FA50E6650B0D7 /* libPods-NotificationServiceExtension.a */,
+				A1AE82AED3C5ED4CBAF360DE /* libPods-WonderPushDemo.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,41 +159,41 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D0A92951EB1E63C00784273 /* Build configuration list for PBXNativeTarget "WonderPushDemo" */;
 			buildPhases = (
-				47E1DCE93D1A8EE38F7FE35C /* [CP] Check Pods Manifest.lock */,
+				5C180B0C4CD68FED5518AC4A /* [CP] Check Pods Manifest.lock */,
 				3D0A927F1EB1E63C00784273 /* Sources */,
 				3D0A92801EB1E63C00784273 /* Frameworks */,
 				3D0A92811EB1E63C00784273 /* Resources */,
-				BB2DD785B536F1766628BFC2 /* [CP] Embed Pods Frameworks */,
-				2356B9198C5AABD2A0A40D9B /* [CP] Copy Pods Resources */,
 				3D0A92A71EB1E70B00784273 /* Embed App Extensions */,
+				4EF177BFDB6ACA4C02382151 /* [CP] Embed Pods Frameworks */,
+				D4350829AB7DF75CDB619E91 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3D0A92A21EB1E70B00784273 /* PBXTargetDependency */,
+				3D0A92C01EB3505500784273 /* PBXTargetDependency */,
 			);
 			name = WonderPushDemo;
 			productName = WonderPushDemo;
 			productReference = 3D0A92831EB1E63C00784273 /* WonderPushDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3D0A929B1EB1E70B00784273 /* WonderPushNotificationServiceExtension */ = {
+		3D0A92B91EB3505400784273 /* NotificationServiceExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3D0A92A61EB1E70B00784273 /* Build configuration list for PBXNativeTarget "WonderPushNotificationServiceExtension" */;
+			buildConfigurationList = 3D0A92C21EB3505500784273 /* Build configuration list for PBXNativeTarget "NotificationServiceExtension" */;
 			buildPhases = (
-				9A2620AF045C9542A09A0F76 /* [CP] Check Pods Manifest.lock */,
-				3D0A92981EB1E70B00784273 /* Sources */,
-				3D0A92991EB1E70B00784273 /* Frameworks */,
-				3D0A929A1EB1E70B00784273 /* Resources */,
-				0140F1FD7E682909666EE42C /* [CP] Copy Pods Resources */,
+				35D6572C51B4FEE0493C8A87 /* [CP] Check Pods Manifest.lock */,
+				3D0A92B61EB3505400784273 /* Sources */,
+				3D0A92B71EB3505400784273 /* Frameworks */,
+				3D0A92B81EB3505400784273 /* Resources */,
+				3E4DDBEBBCF696A69C17839C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = WonderPushNotificationServiceExtension;
-			productName = WonderPushNotificationServiceExtension;
-			productReference = 3D0A929C1EB1E70B00784273 /* WonderPushNotificationServiceExtension.appex */;
+			name = NotificationServiceExtension;
+			productName = NotificationServiceExtension;
+			productReference = 3D0A92BA1EB3505500784273 /* NotificationServiceExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -222,16 +220,11 @@
 							};
 						};
 					};
-					3D0A929B1EB1E70B00784273 = {
+					3D0A92B91EB3505400784273 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = N9ZG2P9A72;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
-						SystemCapabilities = {
-							com.apple.Push = {
-								enabled = 0;
-							};
-						};
 					};
 				};
 			};
@@ -249,7 +242,7 @@
 			projectRoot = "";
 			targets = (
 				3D0A92821EB1E63C00784273 /* WonderPushDemo */,
-				3D0A929B1EB1E70B00784273 /* WonderPushNotificationServiceExtension */,
+				3D0A92B91EB3505400784273 /* NotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -265,7 +258,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3D0A929A1EB1E70B00784273 /* Resources */ = {
+		3D0A92B81EB3505400784273 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -275,37 +268,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0140F1FD7E682909666EE42C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WonderPushNotificationServiceExtension/Pods-WonderPushNotificationServiceExtension-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2356B9198C5AABD2A0A40D9B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WonderPushDemo/Pods-WonderPushDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		47E1DCE93D1A8EE38F7FE35C /* [CP] Check Pods Manifest.lock */ = {
+		35D6572C51B4FEE0493C8A87 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -317,25 +280,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		9A2620AF045C9542A09A0F76 /* [CP] Check Pods Manifest.lock */ = {
+		3E4DDBEBBCF696A69C17839C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NotificationServiceExtension/Pods-NotificationServiceExtension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BB2DD785B536F1766628BFC2 /* [CP] Embed Pods Frameworks */ = {
+		4EF177BFDB6ACA4C02382151 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -348,6 +311,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WonderPushDemo/Pods-WonderPushDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C180B0C4CD68FED5518AC4A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D4350829AB7DF75CDB619E91 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WonderPushDemo/Pods-WonderPushDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -363,21 +356,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3D0A92981EB1E70B00784273 /* Sources */ = {
+		3D0A92B61EB3505400784273 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D0A929F1EB1E70B00784273 /* NotificationService.swift in Sources */,
+				3D0A92BD1EB3505500784273 /* NotificationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3D0A92A21EB1E70B00784273 /* PBXTargetDependency */ = {
+		3D0A92C01EB3505500784273 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3D0A929B1EB1E70B00784273 /* WonderPushNotificationServiceExtension */;
-			targetProxy = 3D0A92A11EB1E70B00784273 /* PBXContainerItemProxy */;
+			target = 3D0A92B91EB3505400784273 /* NotificationServiceExtension */;
+			targetProxy = 3D0A92BF1EB3505500784273 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -496,7 +489,7 @@
 		};
 		3D0A92961EB1E63C00784273 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD637622255F128EBE187CD7 /* Pods-WonderPushDemo.debug.xcconfig */;
+			baseConfigurationReference = 89FF29147136068FD106B136 /* Pods-WonderPushDemo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -517,7 +510,7 @@
 		};
 		3D0A92971EB1E63C00784273 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EAF762347BACD29D0FC66ACC /* Pods-WonderPushDemo.release.xcconfig */;
+			baseConfigurationReference = FE3BE43F5E3CE8A61DCBC9F3 /* Pods-WonderPushDemo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -535,35 +528,35 @@
 			};
 			name = Release;
 		};
-		3D0A92A41EB1E70B00784273 /* Debug */ = {
+		3D0A92C31EB3505500784273 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94A33C1796778EA7F97D134A /* Pods-WonderPushNotificationServiceExtension.debug.xcconfig */;
+			baseConfigurationReference = A227AF82605654C009FF8336 /* Pods-NotificationServiceExtension.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = N9ZG2P9A72;
-				INFOPLIST_FILE = WonderPushNotificationServiceExtension/Info.plist;
+				INFOPLIST_FILE = NotificationServiceExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wonderpush.demo.WonderPushNotificationServiceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wonderpush.demo.NotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "WonderPushNotificationServiceExtension/WonderPushNotificationServiceExtension-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "NotificationServiceExtension/NotificationServiceExtension-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		3D0A92A51EB1E70B00784273 /* Release */ = {
+		3D0A92C41EB3505500784273 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0047F2B80DA51A6935D3AADB /* Pods-WonderPushNotificationServiceExtension.release.xcconfig */;
+			baseConfigurationReference = 47F68F2FF93EC15A7035087F /* Pods-NotificationServiceExtension.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = N9ZG2P9A72;
-				INFOPLIST_FILE = WonderPushNotificationServiceExtension/Info.plist;
+				INFOPLIST_FILE = NotificationServiceExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wonderpush.demo.WonderPushNotificationServiceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wonderpush.demo.NotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "WonderPushNotificationServiceExtension/WonderPushNotificationServiceExtension-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "NotificationServiceExtension/NotificationServiceExtension-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -589,14 +582,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3D0A92A61EB1E70B00784273 /* Build configuration list for PBXNativeTarget "WonderPushNotificationServiceExtension" */ = {
+		3D0A92C21EB3505500784273 /* Build configuration list for PBXNativeTarget "NotificationServiceExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3D0A92A41EB1E70B00784273 /* Debug */,
-				3D0A92A51EB1E70B00784273 /* Release */,
+				3D0A92C31EB3505500784273 /* Debug */,
+				3D0A92C41EB3505500784273 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

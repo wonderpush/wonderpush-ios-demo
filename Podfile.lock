@@ -28,11 +28,19 @@ PODS:
     - OpenUDID (~> 1.0.0)
     - PKAlertController (~> 0.6)
     - TCMobileProvision (~> 1.0.0)
-  - WonderPush/NotificationServiceExtension (2.2.0)
+  - WonderPushExtension (2.2.0):
+    - WonderPushExtension/NotificationService (= 2.2.0)
+  - WonderPushExtension/NotificationService (2.2.0)
 
 DEPENDENCIES:
-  - WonderPush (~> 2.0)
-  - WonderPush/NotificationServiceExtension (~> 2.0)
+  - WonderPush (from `../wonderpush-ios-sdk`)
+  - WonderPushExtension (from `../wonderpush-ios-sdk`)
+
+EXTERNAL SOURCES:
+  WonderPush:
+    :path: ../wonderpush-ios-sdk
+  WonderPushExtension:
+    :path: ../wonderpush-ios-sdk
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -40,8 +48,9 @@ SPEC CHECKSUMS:
   OpenUDID: e7cb6984c7304906ad20f3a36bf087b025896b6b
   PKAlertController: 8867a57e032592bf077965dcd519fe1694ba3a02
   TCMobileProvision: 2a8962b38821a20fad53b9d7851bbc9ae8c52995
-  WonderPush: 59cb0616e4cb32a6dbb90a191b84359c1b640c8b
+  WonderPush: 1ac7984254fdd2c2be12c6350e5bea355ca32f98
+  WonderPushExtension: bd3a0e085e4796ae8c891e2c19c994e344e7a002
 
-PODFILE CHECKSUM: bcf0ff8ac112f220d2f0bf9b5a7e88c4434c1767
+PODFILE CHECKSUM: f5f28b2eeea70fe78341a10b80c0453eb7dc7f87
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

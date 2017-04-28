@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E2926AB52154416A8A1E332559D34A6CF7079F25",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "61F7BF99D85DB2440749CE085C02DDA241336826" : 9223372036854775807,
+    "E2926AB52154416A8A1E332559D34A6CF7079F25" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9438C7F0-7FFF-4E3A-A5D3-84949614323D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "61F7BF99D85DB2440749CE085C02DDA241336826" : "wonderpush-ios-sdk\/",
+    "E2926AB52154416A8A1E332559D34A6CF7079F25" : "wonderpush-ios-demo\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "WonderPushDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "WonderPushDemo.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:wonderpush\/wonderpush-ios-sdk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "61F7BF99D85DB2440749CE085C02DDA241336826"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:wonderpush\/wonderpush-ios-demo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E2926AB52154416A8A1E332559D34A6CF7079F25"
+    }
+  ]
+}
