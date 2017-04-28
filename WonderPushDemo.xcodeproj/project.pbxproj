@@ -11,14 +11,14 @@
 		3D2E2CFC1E5DA9B6004BC253 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2E2CFB1E5DA9B6004BC253 /* NotificationService.m */; };
 		3D2E2D001E5DA9B7004BC253 /* WonderPushNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3D2E2CF81E5DA9B6004BC253 /* WonderPushNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3DBC92C41B5FC2BC00E07FB8 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBC92C31B5FC2BC00E07FB8 /* SettingsViewController.m */; };
-		9BD616A3AAADED0CA766CF5E /* libPods-WonderPushNotificationServiceExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6F66369CB2D4F636D6F036 /* libPods-WonderPushNotificationServiceExtension.a */; };
 		A1B850A019DC05FE00D1B6FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B8509F19DC05FE00D1B6FB /* main.m */; };
 		A1B850A319DC05FE00D1B6FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B850A219DC05FE00D1B6FB /* AppDelegate.m */; };
 		A1B850A619DC05FE00D1B6FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B850A519DC05FE00D1B6FB /* ViewController.m */; };
 		A1B850A919DC05FE00D1B6FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B850A719DC05FE00D1B6FB /* Main.storyboard */; };
 		A1B850AB19DC05FF00D1B6FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1B850AA19DC05FF00D1B6FB /* Images.xcassets */; };
 		A1B850AE19DC05FF00D1B6FB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1B850AC19DC05FF00D1B6FB /* LaunchScreen.xib */; };
-		CD8D6962CBA41616397AB62C /* libPods-WonderPushDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8090340908F8BF1AB9AB0E /* libPods-WonderPushDemo.a */; };
+		C5766EBB9A46E70640F80628 /* libPods-WonderPushNotificationServiceExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 807D7AF233DC26EC47D460CC /* libPods-WonderPushNotificationServiceExtension.a */; };
+		FDB4F995C138455CB88208AB /* libPods-WonderPushDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B49AD9733253B4BE4079066 /* libPods-WonderPushDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +46,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		39F1BBF6EC95773DD8368297 /* Pods-WonderPushNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WonderPushNotificationServiceExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-WonderPushNotificationServiceExtension/Pods-WonderPushNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		3D0A08691D33FB5E001289BD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		3D0A086D1D340001001289BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3D0A086F1D340003001289BD /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -58,9 +59,8 @@
 		3D7879D51D32BC05007C1675 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		3DBC92C21B5FC2BC00E07FB8 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		3DBC92C31B5FC2BC00E07FB8 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		55BF94083626417E144209A6 /* Pods-WonderPushNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WonderPushNotificationServiceExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-WonderPushNotificationServiceExtension/Pods-WonderPushNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
-		5C6F66369CB2D4F636D6F036 /* libPods-WonderPushNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WonderPushNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		83D44299CE17F8B4D7BE8740 /* Pods-WonderPushDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WonderPushDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WonderPushDemo/Pods-WonderPushDemo.release.xcconfig"; sourceTree = "<group>"; };
+		807D7AF233DC26EC47D460CC /* libPods-WonderPushNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WonderPushNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B49AD9733253B4BE4079066 /* libPods-WonderPushDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WonderPushDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1272C6B1A0BC017005A11C1 /* WonderPush.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WonderPush.framework; sourceTree = "<group>"; };
 		A1B8509A19DC05FE00D1B6FB /* WonderPushDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WonderPushDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B8509E19DC05FE00D1B6FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,9 +81,9 @@
 		A1E3E10519E5903C00A4EE09 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		A1E3E10719E5904200A4EE09 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A1E3E10919E5904800A4EE09 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		A51FC960BE63AD2555729F05 /* Pods-WonderPushDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WonderPushDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WonderPushDemo/Pods-WonderPushDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		DA8090340908F8BF1AB9AB0E /* libPods-WonderPushDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WonderPushDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5C6AB6F57E274A6E4A78567 /* Pods-WonderPushNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WonderPushNotificationServiceExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WonderPushNotificationServiceExtension/Pods-WonderPushNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		C2BA016D6C280F18111BBCDD /* Pods-WonderPushDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WonderPushDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WonderPushDemo/Pods-WonderPushDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		D1C836E310316B7676CBC398 /* Pods-WonderPushDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WonderPushDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WonderPushDemo/Pods-WonderPushDemo.release.xcconfig"; sourceTree = "<group>"; };
+		E692E06D617F0140AF0C006E /* Pods-WonderPushNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WonderPushNotificationServiceExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WonderPushNotificationServiceExtension/Pods-WonderPushNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BD616A3AAADED0CA766CF5E /* libPods-WonderPushNotificationServiceExtension.a in Frameworks */,
+				C5766EBB9A46E70640F80628 /* libPods-WonderPushNotificationServiceExtension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,20 +99,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD8D6962CBA41616397AB62C /* libPods-WonderPushDemo.a in Frameworks */,
+				FDB4F995C138455CB88208AB /* libPods-WonderPushDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		022D0BB3557BF4C049987B73 /* Pods */ = {
+		16180E246B9D8E95763B14CE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A51FC960BE63AD2555729F05 /* Pods-WonderPushDemo.debug.xcconfig */,
-				83D44299CE17F8B4D7BE8740 /* Pods-WonderPushDemo.release.xcconfig */,
-				F5C6AB6F57E274A6E4A78567 /* Pods-WonderPushNotificationServiceExtension.debug.xcconfig */,
-				55BF94083626417E144209A6 /* Pods-WonderPushNotificationServiceExtension.release.xcconfig */,
+				C2BA016D6C280F18111BBCDD /* Pods-WonderPushDemo.debug.xcconfig */,
+				D1C836E310316B7676CBC398 /* Pods-WonderPushDemo.release.xcconfig */,
+				E692E06D617F0140AF0C006E /* Pods-WonderPushNotificationServiceExtension.debug.xcconfig */,
+				39F1BBF6EC95773DD8368297 /* Pods-WonderPushNotificationServiceExtension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -134,7 +134,7 @@
 				A1E3E11019E5B26700A4EE09 /* Frameworks */,
 				A1B8509C19DC05FE00D1B6FB /* WonderPushDemo */,
 				A1B8509B19DC05FE00D1B6FB /* Products */,
-				022D0BB3557BF4C049987B73 /* Pods */,
+				16180E246B9D8E95763B14CE /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -188,8 +188,8 @@
 				A1E3E0FD19E5901900A4EE09 /* CoreGraphics.framework */,
 				A1E3E0FB19E5901300A4EE09 /* MobileCoreServices.framework */,
 				A1E3E0F919E5900B00A4EE09 /* SystemConfiguration.framework */,
-				DA8090340908F8BF1AB9AB0E /* libPods-WonderPushDemo.a */,
-				5C6F66369CB2D4F636D6F036 /* libPods-WonderPushNotificationServiceExtension.a */,
+				8B49AD9733253B4BE4079066 /* libPods-WonderPushDemo.a */,
+				807D7AF233DC26EC47D460CC /* libPods-WonderPushNotificationServiceExtension.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -201,11 +201,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D2E2D031E5DA9B7004BC253 /* Build configuration list for PBXNativeTarget "WonderPushNotificationServiceExtension" */;
 			buildPhases = (
-				1511F9E814D5DFA1A2D63B41 /* [CP] Check Pods Manifest.lock */,
+				C44E1211C5C38A6741A28EE9 /* [CP] Check Pods Manifest.lock */,
 				3D2E2CF41E5DA9B6004BC253 /* Sources */,
 				3D2E2CF51E5DA9B6004BC253 /* Frameworks */,
 				3D2E2CF61E5DA9B6004BC253 /* Resources */,
-				2B9A9F4A57B1BD13B1EBDD1F /* [CP] Copy Pods Resources */,
+				6FA19FAE571B8DB9CE491FFB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,13 +220,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1B850BD19DC05FF00D1B6FB /* Build configuration list for PBXNativeTarget "WonderPushDemo" */;
 			buildPhases = (
-				230881CD93C192A00032F2DE /* [CP] Check Pods Manifest.lock */,
+				AA1E767E1F40AD431E68E1B3 /* [CP] Check Pods Manifest.lock */,
 				A1B8509619DC05FE00D1B6FB /* Sources */,
 				A1B8509719DC05FE00D1B6FB /* Frameworks */,
 				A1B8509819DC05FE00D1B6FB /* Resources */,
-				62B0B5CEA78F1C41CF42B73C /* [CP] Embed Pods Frameworks */,
-				DFF609A39D7B0346E01E127C /* [CP] Copy Pods Resources */,
 				3D2E2D041E5DA9B7004BC253 /* Embed App Extensions */,
+				EF5E553F28D82668064F0E72 /* [CP] Embed Pods Frameworks */,
+				C63A637FC709BED8D39442B8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -309,37 +309,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1511F9E814D5DFA1A2D63B41 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		230881CD93C192A00032F2DE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		2B9A9F4A57B1BD13B1EBDD1F /* [CP] Copy Pods Resources */ = {
+		6FA19FAE571B8DB9CE491FFB /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -354,22 +324,37 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WonderPushNotificationServiceExtension/Pods-WonderPushNotificationServiceExtension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		62B0B5CEA78F1C41CF42B73C /* [CP] Embed Pods Frameworks */ = {
+		AA1E767E1F40AD431E68E1B3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WonderPushDemo/Pods-WonderPushDemo-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		DFF609A39D7B0346E01E127C /* [CP] Copy Pods Resources */ = {
+		C44E1211C5C38A6741A28EE9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C63A637FC709BED8D39442B8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -382,6 +367,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WonderPushDemo/Pods-WonderPushDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF5E553F28D82668064F0E72 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WonderPushDemo/Pods-WonderPushDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -450,7 +450,7 @@
 /* Begin XCBuildConfiguration section */
 		3D2E2D011E5DA9B7004BC253 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F5C6AB6F57E274A6E4A78567 /* Pods-WonderPushNotificationServiceExtension.debug.xcconfig */;
+			baseConfigurationReference = E692E06D617F0140AF0C006E /* Pods-WonderPushNotificationServiceExtension.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -471,7 +471,7 @@
 		};
 		3D2E2D021E5DA9B7004BC253 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55BF94083626417E144209A6 /* Pods-WonderPushNotificationServiceExtension.release.xcconfig */;
+			baseConfigurationReference = 39F1BBF6EC95773DD8368297 /* Pods-WonderPushNotificationServiceExtension.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -572,7 +572,7 @@
 		};
 		A1B850BE19DC05FF00D1B6FB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A51FC960BE63AD2555729F05 /* Pods-WonderPushDemo.debug.xcconfig */;
+			baseConfigurationReference = C2BA016D6C280F18111BBCDD /* Pods-WonderPushDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -583,7 +583,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = WonderPushDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wonderpush.demo;
 				PRODUCT_NAME = WonderPushDemo;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -592,7 +592,7 @@
 		};
 		A1B850BF19DC05FF00D1B6FB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 83D44299CE17F8B4D7BE8740 /* Pods-WonderPushDemo.release.xcconfig */;
+			baseConfigurationReference = D1C836E310316B7676CBC398 /* Pods-WonderPushDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -603,7 +603,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = WonderPushDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wonderpush.demo;
 				PRODUCT_NAME = WonderPushDemo;
 				TARGETED_DEVICE_FAMILY = "1,2";

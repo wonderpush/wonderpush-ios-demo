@@ -14,8 +14,8 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - DTFoundation/Core (1.7.11)
-  - DTFoundation/DTASN1 (1.7.11):
+  - DTFoundation/Core (1.7.12)
+  - DTFoundation/DTASN1 (1.7.12):
     - DTFoundation/Core
   - OpenUDID (1.0.0)
   - PKAlertController (0.6.0)
@@ -28,24 +28,29 @@ PODS:
     - OpenUDID (~> 1.0.0)
     - PKAlertController (~> 0.6)
     - TCMobileProvision (~> 1.0.0)
-  - WonderPush/NotificationServiceExtension (2.2.0)
+  - WonderPushExtension (2.2.0):
+    - WonderPushExtension/NotificationService (= 2.2.0)
+  - WonderPushExtension/NotificationService (2.2.0)
 
 DEPENDENCIES:
   - WonderPush (from `../wonderpush-ios-sdk`)
-  - WonderPush/NotificationServiceExtension (from `../wonderpush-ios-sdk`)
+  - WonderPushExtension (from `../wonderpush-ios-sdk`)
 
 EXTERNAL SOURCES:
   WonderPush:
     :path: ../wonderpush-ios-sdk
+  WonderPushExtension:
+    :path: ../wonderpush-ios-sdk
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  DTFoundation: 0ef29c70a9814e15518694862bd739347abe2a50
+  DTFoundation: 26a164ef510877387906fb92bff524a792db4bf8
   OpenUDID: e7cb6984c7304906ad20f3a36bf087b025896b6b
   PKAlertController: 8867a57e032592bf077965dcd519fe1694ba3a02
   TCMobileProvision: 2a8962b38821a20fad53b9d7851bbc9ae8c52995
-  WonderPush: 3a2241a8b1bbd1d5f7c88ea981a7be1fe8d0b5b2
+  WonderPush: 1ac7984254fdd2c2be12c6350e5bea355ca32f98
+  WonderPushExtension: bd3a0e085e4796ae8c891e2c19c994e344e7a002
 
-PODFILE CHECKSUM: 102e7c150c766473db197d6a903fa409db5e7e7f
+PODFILE CHECKSUM: b96776c2b507ac9d264d8f03a12554fc392d464a
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

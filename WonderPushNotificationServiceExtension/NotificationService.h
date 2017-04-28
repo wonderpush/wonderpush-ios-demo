@@ -1,4 +1,4 @@
-#import <WonderPush/NotificationServiceExtension.h>
+#import <WonderPushExtension/NotificationServiceExtension.h>
 
 // Our class only needs to extend a utility class from the WonderPush NotificationServiceExtension SDK,
 // all necessary code is already done there.
