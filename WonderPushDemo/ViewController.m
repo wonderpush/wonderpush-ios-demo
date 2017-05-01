@@ -39,7 +39,12 @@ static CGFloat cellHeight;
                           @{@"title":@"SEX: MALE",        @"data":@{@"string_sex":@"male"},
                             @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]},
                           @{@"title":@"SEX: FEMALE",      @"data":@{@"string_sex":@"female"},
-                            @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]}];
+                            @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]},
+                          @{@"title":@"SEX: [MALE, FEMALE]", @"data":@{@"string_sex":@[@"male",@"female"]},
+                            @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]},
+                          @{@"title":@"SEX: NULL", @"data":@{@"string_sex":[NSNull null]},
+                            @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]},
+                          ];
     [self calculateNewCellHeightForSize:self.tableView.frame.size];
 }
 
