@@ -11,18 +11,18 @@
 #import <UIKit/UIKit.h>
 
 
-@interface AppDelegate ()
+@interface AppDelegate () <WonderPushDelegate>
 
 @end
 
 @implementation AppDelegate
-
 
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [WonderPush setLogging:YES];
     [WonderPush setClientId:@"7524c8a317c1794c0b23895dce3a3314d6a24105" secret:@"b43a2d0fbdb54d24332b4d70736954eab5d24d29012b18ef6d214ff0f51e7901"];
     [WonderPush setupDelegateForApplication:application];
     [WonderPush setupDelegateForUserNotificationCenter];
+    [WonderPush setDelegate:self];
     return YES;
 }
 
@@ -79,4 +79,26 @@
     return YES;
 }
 
+#pragma mark - WonderPushDelegate
+
+/**
+ Open all URLs with a wonderpush.com hostname in a web view.
+ */
+- (NSURL *) wonderPushWillOpenURL:(NSURL *)URL
+{
+    if ([[URL host] hasSuffix:@".wonderpush.com"]) {
+        id navigationController = [[[UIApplication sharedApplication] keyWindow] rootViewController];
+        if ([navigationController isKindOfClass:[UINavigationController class]]) {
+            UIViewController *controller = [UIViewController new];
+            UIWebView *webView = [UIWebView new];
+            webView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+            [controller.view addSubview:webView];
+            webView.frame = controller.view.bounds;
+            [webView loadRequest:[NSURLRequest requestWithURL:URL]];
+            [navigationController pushViewController:controller animated:true];
+            return nil;
+        }
+    }
+    return URL;
+}
 @end
