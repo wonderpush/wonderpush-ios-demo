@@ -49,10 +49,13 @@
         self.swtNotificationTypeBadge.on = (types & UIUserNotificationTypeBadge);
         self.swtNotificationTypeSound.on = (types & UIUserNotificationTypeSound);
     } else {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         UIRemoteNotificationType types = [[UIApplication sharedApplication] enabledRemoteNotificationTypes];
         self.swtNotificationTypeAlert.on = (types & UIRemoteNotificationTypeAlert);
         self.swtNotificationTypeBadge.on = (types & UIRemoteNotificationTypeBadge);
         self.swtNotificationTypeSound.on = (types & UIRemoteNotificationTypeSound);
+#pragma clang diagnostic pop
     }
 }
 
@@ -102,6 +105,8 @@
         UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:types categories:currentSettings.categories];
         [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
     } else {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         UIRemoteNotificationType types = [[UIApplication sharedApplication] enabledRemoteNotificationTypes];
         if (self.swtNotificationTypeAlert.isOn) types |= UIRemoteNotificationTypeAlert;
         else types &= ~(UIUserNotificationTypeAlert);
@@ -110,6 +115,7 @@
         if (self.swtNotificationTypeSound.isOn) types |= UIRemoteNotificationTypeSound;
         else types &= ~(UIRemoteNotificationTypeSound);
         [[UIApplication sharedApplication] registerForRemoteNotificationTypes:types];
+#pragma clang diagnostic pop
     }
 }
 
