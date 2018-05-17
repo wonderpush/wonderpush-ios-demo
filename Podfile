@@ -1,7 +1,7 @@
 #use_frameworks!
 
 target 'WonderPushDemo' do
-    platform :ios, '7.0'
+    platform :ios, '8.0'
 
     # For production:
     #   pod 'WonderPush', '~> 2.0'
@@ -12,7 +12,7 @@ target 'WonderPushDemo' do
 end
 
 target 'WonderPushNotificationServiceExtension' do
-    platform :ios, '7.0'
+    platform :ios, '8.0'
     # For production:
     #   pod 'WonderPushExtension', '~> 2.0'
     # For testing the latest master:
