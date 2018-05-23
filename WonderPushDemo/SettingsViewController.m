@@ -42,12 +42,25 @@
         }];
     }
 
-    if ([[UIApplication sharedApplication] respondsToSelector:@selector(currentUserNotificationSettings)]) {
-        UIUserNotificationSettings *currentSettings = [[UIApplication sharedApplication] currentUserNotificationSettings];
-        UIUserNotificationType types = currentSettings ? currentSettings.types : 0;
-        self.swtNotificationTypeAlert.on = (types & UIUserNotificationTypeAlert);
-        self.swtNotificationTypeBadge.on = (types & UIUserNotificationTypeBadge);
-        self.swtNotificationTypeSound.on = (types & UIUserNotificationTypeSound);
+    if (@available(iOS 10.0, *)) {
+        [[UNUserNotificationCenter currentNotificationCenter] getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
+            self.swtNotificationTypeAlert.on = settings.alertSetting == UNAuthorizationStatusAuthorized;
+            self.swtNotificationTypeBadge.on = settings.badgeSetting == UNAuthorizationStatusAuthorized;
+            self.swtNotificationTypeSound.on = settings.soundSetting == UNAuthorizationStatusAuthorized;
+        }];
+    } else if (@available(iOS 8.0, *)) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        if ([[UIApplication sharedApplication] respondsToSelector:@selector(currentUserNotificationSettings)]) {
+            UIUserNotificationSettings *currentSettings = [[UIApplication sharedApplication] currentUserNotificationSettings];
+            UIUserNotificationType types = currentSettings ? currentSettings.types : 0;
+            self.swtNotificationTypeAlert.on = (types & UIUserNotificationTypeAlert);
+            self.swtNotificationTypeBadge.on = (types & UIUserNotificationTypeBadge);
+            self.swtNotificationTypeSound.on = (types & UIUserNotificationTypeSound);
+        } else {
+            NSLog(@"Cannot resolve currentUserNotificationSettings");
+        }
+#pragma clang diagnostic pop
     } else {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
@@ -93,17 +106,43 @@
 
 - (IBAction) swtNotificationType_valueChange:(UISwitch *)sender
 {
-    if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)]) {
-        UIUserNotificationSettings *currentSettings = [[UIApplication sharedApplication] currentUserNotificationSettings];
-        UIUserNotificationType types = currentSettings.types;
-        if (self.swtNotificationTypeAlert.isOn) types |= UIUserNotificationTypeAlert;
-        else types &= ~(UIUserNotificationTypeAlert);
-        if (self.swtNotificationTypeBadge.isOn) types |= UIUserNotificationTypeBadge;
-        else types &= ~(UIUserNotificationTypeBadge);
-        if (self.swtNotificationTypeSound.isOn) types |= UIUserNotificationTypeSound;
-        else types &= ~(UIUserNotificationTypeSound);
-        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:types categories:currentSettings.categories];
-        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+    if (@available(iOS 10.0, *)) {
+        [[UNUserNotificationCenter currentNotificationCenter] getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
+            UNAuthorizationOptions opts = UNAuthorizationOptionNone;
+            if (settings.alertSetting == UNAuthorizationStatusAuthorized) opts |= UNAuthorizationOptionAlert;
+            if (settings.badgeSetting == UNAuthorizationStatusAuthorized) opts |= UNAuthorizationOptionBadge;
+            if (settings.soundSetting == UNAuthorizationStatusAuthorized) opts |= UNAuthorizationOptionSound;
+            if (self.swtNotificationTypeAlert.isOn) opts |= UNAuthorizationOptionAlert;
+            else opts &= ~(UNAuthorizationOptionAlert);
+            if (self.swtNotificationTypeBadge.isOn) opts |= UNAuthorizationOptionBadge;
+            else opts &= ~(UNAuthorizationOptionBadge);
+            if (self.swtNotificationTypeSound.isOn) opts |= UNAuthorizationOptionSound;
+            else opts &= ~(UNAuthorizationOptionSound);
+            [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:opts completionHandler:^(BOOL granted, NSError * _Nullable error) {
+                if (error) {
+                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
+                    [self presentViewController:alert animated:YES completion:nil];
+                }
+            }];
+        }];
+    } else if (@available(iOS 8.0, *)) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        if ([[UIApplication sharedApplication] respondsToSelector:@selector(currentUserNotificationSettings)]) {
+            UIUserNotificationSettings *currentSettings = [[UIApplication sharedApplication] currentUserNotificationSettings];
+            UIUserNotificationType types = currentSettings.types;
+            if (self.swtNotificationTypeAlert.isOn) types |= UIUserNotificationTypeAlert;
+            else types &= ~(UIUserNotificationTypeAlert);
+            if (self.swtNotificationTypeBadge.isOn) types |= UIUserNotificationTypeBadge;
+            else types &= ~(UIUserNotificationTypeBadge);
+            if (self.swtNotificationTypeSound.isOn) types |= UIUserNotificationTypeSound;
+            else types &= ~(UIUserNotificationTypeSound);
+            UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:types categories:currentSettings.categories];
+            [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+        } else {
+            NSLog(@"Cannot resolve currentUserNotificationSettings");
+        }
+#pragma clang diagnostic pop
     } else {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
