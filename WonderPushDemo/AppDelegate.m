@@ -29,13 +29,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Register an example method
     [[NSNotificationCenter defaultCenter] addObserverForName:@"example" object:nil queue:nil usingBlock:^(NSNotification *note) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"The example method was called"
-                                                        message:[NSString stringWithFormat:@"argument: %@",
-                                                                 [note.userInfo objectForKey:WP_REGISTERED_CALLBACK_PARAMETER_KEY]]
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"The example method was called"
+                                                                       message:[NSString stringWithFormat:@"argument: %@",
+                                                                                [note.userInfo objectForKey:WP_REGISTERED_CALLBACK_PARAMETER_KEY]]
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [application.keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+        });
     }];
 
     // Register a catchall listener to help seeing called methods
@@ -44,14 +45,15 @@
             && [note.userInfo objectForKey:WP_REGISTERED_CALLBACK_PARAMETER_KEY]
             && ![note.name isEqualToString:@"example"] // avoid a second notification for the "example" method handled above
         ) {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Method \"%@\" called",
-                                                                     note.name]
-                                                            message:[NSString stringWithFormat:@"argument: %@",
-                                                                     [note.userInfo objectForKey:WP_REGISTERED_CALLBACK_PARAMETER_KEY]]
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles:nil];
-            [alert show];
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"Method \"%@\" called",
+                                                                                    note.name]
+                                                                           message:[NSString stringWithFormat:@"argument: %@",
+                                                                                    [note.userInfo objectForKey:WP_REGISTERED_CALLBACK_PARAMETER_KEY]]
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [application.keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+            });
         }
     }];
 
@@ -68,14 +70,22 @@
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     NSLog(@"application: openURL:%@ sourceApplication:%@ annotation:%@", url, sourceApplication, annotation);
-    [[[UIAlertView alloc] initWithTitle:@"Deep link" message:[url absoluteString] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Deep link" message:[url absoluteString] preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [application.keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+    });
     return YES;
 }
 
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options
 {
     NSLog(@"application: openURL:%@ options:%@", url, options);
-    [[[UIAlertView alloc] initWithTitle:@"Deep link" message:[url absoluteString] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Deep link" message:[url absoluteString] preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [application.keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+    });
     return YES;
 }
 

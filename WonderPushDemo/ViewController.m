@@ -91,8 +91,9 @@ static CGFloat cellHeight;
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:custom options:0 error:&error];
     NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Install custom properties" message:jsonStr delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil];
-    [alert show];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Install custom properties" message:jsonStr preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"Close" style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 #pragma TABLE VIEW DATASOURCE METHODS
