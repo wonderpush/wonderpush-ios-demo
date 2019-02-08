@@ -140,12 +140,41 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="sO5-7f-uh3">
+                                        <rect key="frame" x="0.0" y="187.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sO5-7f-uh3" id="HBb-BD-DNt">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User consent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iE-ok-Q7L">
+                                                    <rect key="frame" x="16" y="11.5" width="284" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hnt-TS-VDM" userLabel="Swt User Consent">
+                                                    <rect key="frame" x="308" y="6" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="swtUserConsent_valueChange:" destination="bUI-z9-OHb" eventType="valueChanged" id="gbo-Q6-J0i"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="hnt-TS-VDM" secondAttribute="trailing" constant="18" id="FYB-Db-mjF"/>
+                                                <constraint firstItem="4iE-ok-Q7L" firstAttribute="centerY" secondItem="HBb-BD-DNt" secondAttribute="centerY" id="TFd-cY-Idz"/>
+                                                <constraint firstItem="hnt-TS-VDM" firstAttribute="leading" secondItem="4iE-ok-Q7L" secondAttribute="trailing" constant="8" id="d9b-FP-Q1N"/>
+                                                <constraint firstItem="hnt-TS-VDM" firstAttribute="centerY" secondItem="HBb-BD-DNt" secondAttribute="centerY" id="mdV-6G-GhV"/>
+                                                <constraint firstItem="4iE-ok-Q7L" firstAttribute="leading" secondItem="HBb-BD-DNt" secondAttribute="leadingMargin" id="nes-0I-h6c"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Notification types" id="K8Q-j0-30t">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationLevel="1" indentationWidth="10" id="TJz-Fj-9PL">
-                                        <rect key="frame" x="0.0" y="235.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="279.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TJz-Fj-9PL" id="2Rg-hn-YhU">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -175,7 +204,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationLevel="1" indentationWidth="10" id="92M-Lz-tXp">
-                                        <rect key="frame" x="0.0" y="279.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="323.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="92M-Lz-tXp" id="cSz-Hq-3WQ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -205,7 +234,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationLevel="1" indentationWidth="10" id="cIs-nb-l7R">
-                                        <rect key="frame" x="0.0" y="323.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="367.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cIs-nb-l7R" id="V9J-8A-4jp">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -235,7 +264,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationLevel="1" indentationWidth="10" id="1lG-mI-HXN">
-                                        <rect key="frame" x="0.0" y="367.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="411.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1lG-mI-HXN" id="dtJ-cd-oeX">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -271,12 +300,13 @@
                         <outlet property="swtNotificationTypeAlert" destination="Ejl-Qk-5nb" id="RR1-Wb-NE2"/>
                         <outlet property="swtNotificationTypeBadge" destination="7Wz-cl-Yde" id="HP8-nL-sAg"/>
                         <outlet property="swtNotificationTypeSound" destination="UJn-Y0-C2e" id="5Pv-TS-CYB"/>
+                        <outlet property="swtUserConsent" destination="hnt-TS-VDM" id="V3b-7Z-Fcb"/>
                         <outlet property="txtUserId" destination="cIN-N0-brY" id="ZHY-YH-728"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IbB-XH-hns" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1650" y="136"/>
+            <point key="canvasLocation" x="1648.8" y="135.38230884557723"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mcj-0z-hS6">

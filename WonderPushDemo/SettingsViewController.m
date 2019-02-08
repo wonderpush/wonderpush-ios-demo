@@ -19,6 +19,7 @@
 @property (nonatomic) IBOutlet UISwitch *swtNotificationTypeAlert;
 @property (nonatomic) IBOutlet UISwitch *swtNotificationTypeBadge;
 @property (nonatomic) IBOutlet UISwitch *swtNotificationTypeSound;
+@property (weak, nonatomic) IBOutlet UISwitch *swtUserConsent;
 
 @end
 
@@ -31,6 +32,7 @@
 
     BOOL geolocation = [[NSUserDefaults standardUserDefaults] boolForKey:@"geolocation"];
     [self.swtEnableGeolocation setOn:geolocation];
+    [self.swtUserConsent setOn:[WonderPush getUserConsent]];
 
     if ([WonderPush isReady]) {
         [self loadSettings];
@@ -102,6 +104,10 @@
     }
     [textField resignFirstResponder];
     return YES;
+}
+- (IBAction)swtUserConsent_valueChange:(id)sender
+{
+    [WonderPush setUserConsent:self.swtUserConsent.isOn];
 }
 
 - (IBAction) swtNotificationType_valueChange:(UISwitch *)sender

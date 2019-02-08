@@ -18,6 +18,8 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    BOOL requiresUserConsent = [[NSUserDefaults standardUserDefaults] boolForKey:@"requiresUserConsent"];
+    [WonderPush setRequiresUserConsent:requiresUserConsent];
     [WonderPush setLogging:YES];
     [WonderPush setClientId:@"7524c8a317c1794c0b23895dce3a3314d6a24105" secret:@"b43a2d0fbdb54d24332b4d70736954eab5d24d29012b18ef6d214ff0f51e7901"];
     [WonderPush setupDelegateForApplication:application];

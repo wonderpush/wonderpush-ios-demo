@@ -12,6 +12,7 @@
 		3D3A50171FE18FC8009B5799 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A50161FE18FC8009B5799 /* NotificationService.m */; };
 		3D3A501B1FE18FC8009B5799 /* WonderPushNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3D3A50131FE18FC8009B5799 /* WonderPushNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3DBC92C41B5FC2BC00E07FB8 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBC92C31B5FC2BC00E07FB8 /* SettingsViewController.m */; };
+		9939EF11220B3B9600F1F974 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9939EF10220B3B9500F1F974 /* Settings.bundle */; };
 		A1B850A019DC05FE00D1B6FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B8509F19DC05FE00D1B6FB /* main.m */; };
 		A1B850A319DC05FE00D1B6FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B850A219DC05FE00D1B6FB /* AppDelegate.m */; };
 		A1B850A619DC05FE00D1B6FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B850A519DC05FE00D1B6FB /* ViewController.m */; };
@@ -61,6 +62,7 @@
 		3DBC92C31B5FC2BC00E07FB8 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		807D7AF233DC26EC47D460CC /* libPods-WonderPushNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WonderPushNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B49AD9733253B4BE4079066 /* libPods-WonderPushDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WonderPushDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9939EF10220B3B9500F1F974 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		A1272C6B1A0BC017005A11C1 /* WonderPush.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WonderPush.framework; sourceTree = "<group>"; };
 		A1B8509A19DC05FE00D1B6FB /* WonderPushDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WonderPushDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B8509E19DC05FE00D1B6FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				A1B850AA19DC05FF00D1B6FB /* Images.xcassets */,
 				A1B850AC19DC05FF00D1B6FB /* LaunchScreen.xib */,
 				A1B8509D19DC05FE00D1B6FB /* Supporting Files */,
+				9939EF10220B3B9500F1F974 /* Settings.bundle */,
 			);
 			path = WonderPushDemo;
 			sourceTree = "<group>";
@@ -205,7 +208,6 @@
 				3D3A500F1FE18FC8009B5799 /* Sources */,
 				3D3A50101FE18FC8009B5799 /* Frameworks */,
 				3D3A50111FE18FC8009B5799 /* Resources */,
-				CF52352BF408726DE0DD9FAE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,7 +227,6 @@
 				A1B8509719DC05FE00D1B6FB /* Frameworks */,
 				A1B8509819DC05FE00D1B6FB /* Resources */,
 				3D2E2D041E5DA9B7004BC253 /* Embed App Extensions */,
-				EF5E553F28D82668064F0E72 /* [CP] Embed Pods Frameworks */,
 				C63A637FC709BED8D39442B8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -301,6 +302,7 @@
 			files = (
 				A1B850A919DC05FE00D1B6FB /* Main.storyboard in Resources */,
 				3D0A086C1D340001001289BD /* Localizable.strings in Resources */,
+				9939EF11220B3B9600F1F974 /* Settings.bundle in Resources */,
 				A1B850AE19DC05FF00D1B6FB /* LaunchScreen.xib in Resources */,
 				A1B850AB19DC05FF00D1B6FB /* Images.xcassets in Resources */,
 			);
@@ -334,31 +336,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-WonderPushDemo/Pods-WonderPushDemo-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/PKAlertController/PKAlertController.bundle,
-				$PODS_CONFIGURATION_BUILD_DIR/WonderPush/WonderPush.bundle,
+				"${PODS_CONFIGURATION_BUILD_DIR}/PKAlertController/PKAlertController.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/WonderPush/WonderPush.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PKAlertController.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WonderPush.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WonderPushDemo/Pods-WonderPushDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CF52352BF408726DE0DD9FAE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WonderPushNotificationServiceExtension/Pods-WonderPushNotificationServiceExtension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E5BBE7AC72DB7E4E8E147386 /* [CP] Check Pods Manifest.lock */ = {
@@ -377,21 +365,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EF5E553F28D82668064F0E72 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WonderPushDemo/Pods-WonderPushDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
