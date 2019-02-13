@@ -168,5 +168,17 @@
 {
     [[UIApplication sharedApplication] unregisterForRemoteNotifications];
 }
+- (IBAction) btnClearEventsHistory_touchUpInside:(UIButton *)sender
+{
+    [WonderPush clearEventsHistory];
+}
+- (IBAction) btnClearPreferences_touchUpInside:(UIButton *)sender
+{
+    [WonderPush clearPreferences];
+}
+- (IBAction) btnClearAllData_touchUpInside:(UIButton *)sender
+{
+    [WonderPush clearAllData];
+}
 
 @end

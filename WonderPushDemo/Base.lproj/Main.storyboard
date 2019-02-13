@@ -263,8 +263,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Actions" id="Utz-tH-8Oh">
+                                <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationLevel="1" indentationWidth="10" id="1lG-mI-HXN">
-                                        <rect key="frame" x="0.0" y="411.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="459.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1lG-mI-HXN" id="dtJ-cd-oeX">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -272,7 +276,9 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2L-FR-kmP">
                                                     <rect key="frame" x="16" y="7" width="343" height="30"/>
-                                                    <state key="normal" title="Unregister"/>
+                                                    <state key="normal" title="Unregister">
+                                                        <color key="titleColor" red="0.90980392160000001" green="0.17254901959999999" blue="0.047058823530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="btnUnregister_touchUpInside:" destination="bUI-z9-OHb" eventType="touchUpInside" id="N63-00-ZyR"/>
                                                     </connections>
@@ -283,6 +289,81 @@
                                                 <constraint firstItem="i2L-FR-kmP" firstAttribute="centerY" secondItem="dtJ-cd-oeX" secondAttribute="centerY" id="MmP-LD-uBj"/>
                                                 <constraint firstItem="i2L-FR-kmP" firstAttribute="trailing" secondItem="dtJ-cd-oeX" secondAttribute="trailingMargin" id="bid-Dx-wVT"/>
                                                 <constraint firstItem="i2L-FR-kmP" firstAttribute="leading" secondItem="dtJ-cd-oeX" secondAttribute="leadingMargin" id="oaJ-yh-8R4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationLevel="1" indentationWidth="10" id="b38-ff-wtC">
+                                        <rect key="frame" x="0.0" y="503.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b38-ff-wtC" id="ecQ-uE-OVy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlk-3G-6w5">
+                                                    <rect key="frame" x="16" y="7" width="343" height="30"/>
+                                                    <state key="normal" title="Clear events history">
+                                                        <color key="titleColor" red="0.90980392160000001" green="0.17254901959999999" blue="0.047058823530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="btnClearEventsHistory_touchUpInside:" destination="bUI-z9-OHb" eventType="touchUpInside" id="Lyx-Od-jE2"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qlk-3G-6w5" firstAttribute="trailing" secondItem="ecQ-uE-OVy" secondAttribute="trailingMargin" id="4JE-ZK-dsa"/>
+                                                <constraint firstItem="qlk-3G-6w5" firstAttribute="centerY" secondItem="ecQ-uE-OVy" secondAttribute="centerY" id="LMJ-jf-TFB"/>
+                                                <constraint firstItem="qlk-3G-6w5" firstAttribute="leading" secondItem="ecQ-uE-OVy" secondAttribute="leadingMargin" id="Qbl-Tf-vdU"/>
+                                                <constraint firstItem="qlk-3G-6w5" firstAttribute="leading" secondItem="ecQ-uE-OVy" secondAttribute="leadingMargin" id="ZgM-IC-HWF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationLevel="1" indentationWidth="10" id="dc7-YA-4RO">
+                                        <rect key="frame" x="0.0" y="547.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dc7-YA-4RO" id="gsx-Fx-cee">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VgZ-Ir-Hud">
+                                                    <rect key="frame" x="16" y="7" width="343" height="30"/>
+                                                    <state key="normal" title="Clear preferences">
+                                                        <color key="titleColor" red="0.90980392160000001" green="0.17254901959999999" blue="0.047058823530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="btnClearPreferences_touchUpInside:" destination="bUI-z9-OHb" eventType="touchUpInside" id="8Ft-eg-na2"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VgZ-Ir-Hud" firstAttribute="centerY" secondItem="gsx-Fx-cee" secondAttribute="centerY" id="6XE-OB-bU8"/>
+                                                <constraint firstItem="VgZ-Ir-Hud" firstAttribute="leading" secondItem="gsx-Fx-cee" secondAttribute="leadingMargin" id="ce4-BV-bTz"/>
+                                                <constraint firstItem="VgZ-Ir-Hud" firstAttribute="trailing" secondItem="gsx-Fx-cee" secondAttribute="trailingMargin" id="nrh-x2-QGo"/>
+                                                <constraint firstItem="VgZ-Ir-Hud" firstAttribute="leading" secondItem="gsx-Fx-cee" secondAttribute="leadingMargin" id="wMk-Wx-VY0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationLevel="1" indentationWidth="10" id="DLj-v8-fMO">
+                                        <rect key="frame" x="0.0" y="591.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DLj-v8-fMO" id="WEp-2y-MZy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guK-2M-rVL">
+                                                    <rect key="frame" x="16" y="7" width="343" height="30"/>
+                                                    <state key="normal" title="Clear all data">
+                                                        <color key="titleColor" red="0.90980392160000001" green="0.17254901959999999" blue="0.047058823530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="btnClearAllData_touchUpInside:" destination="bUI-z9-OHb" eventType="touchUpInside" id="FRC-Dt-aQF"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="guK-2M-rVL" firstAttribute="leading" secondItem="WEp-2y-MZy" secondAttribute="leadingMargin" id="cJt-pu-Bdn"/>
+                                                <constraint firstItem="guK-2M-rVL" firstAttribute="trailing" secondItem="WEp-2y-MZy" secondAttribute="trailingMargin" id="djK-GP-asO"/>
+                                                <constraint firstItem="guK-2M-rVL" firstAttribute="centerY" secondItem="WEp-2y-MZy" secondAttribute="centerY" id="gh0-Qe-hiS"/>
+                                                <constraint firstItem="guK-2M-rVL" firstAttribute="leading" secondItem="WEp-2y-MZy" secondAttribute="leadingMargin" id="t1o-9R-QPe"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
