@@ -69,17 +69,6 @@
     return YES;
 }
 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
-{
-    NSLog(@"application: openURL:%@ sourceApplication:%@ annotation:%@", url, sourceApplication, annotation);
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Deep link" message:[url absoluteString] preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [application.keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
-    });
-    return YES;
-}
-
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options
 {
     NSLog(@"application: openURL:%@ options:%@", url, options);

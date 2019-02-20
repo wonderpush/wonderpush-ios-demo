@@ -1,42 +1,20 @@
 PODS:
-  - DTFoundation/Core (1.7.12)
-  - DTFoundation/DTASN1 (1.7.12):
-    - DTFoundation/Core
-  - PKAlertController (0.6.0)
-  - TCMobileProvision (1.0.0):
-    - DTFoundation/DTASN1 (~> 1.6)
   - WonderPush (2.3.0):
     - WonderPush/Core (= 2.3.0)
-  - WonderPush/Core (2.3.0):
-    - PKAlertController (~> 0.6)
-    - TCMobileProvision (~> 1.0.0)
-  - WonderPushExtension (2.3.0):
-    - WonderPushExtension/NotificationService (= 2.3.0)
-  - WonderPushExtension/NotificationService (2.3.0)
+  - WonderPush/Core (2.3.0)
+  - WonderPush/Extension (2.3.0)
 
 DEPENDENCIES:
   - WonderPush (from `../wonderpush-ios-sdk`)
-  - WonderPushExtension (from `../wonderpush-ios-sdk`)
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - DTFoundation
-    - PKAlertController
-    - TCMobileProvision
+  - WonderPush/Extension (from `../wonderpush-ios-sdk`)
 
 EXTERNAL SOURCES:
   WonderPush:
     :path: "../wonderpush-ios-sdk"
-  WonderPushExtension:
-    :path: "../wonderpush-ios-sdk"
 
 SPEC CHECKSUMS:
-  DTFoundation: 26a164ef510877387906fb92bff524a792db4bf8
-  PKAlertController: 8867a57e032592bf077965dcd519fe1694ba3a02
-  TCMobileProvision: 2a8962b38821a20fad53b9d7851bbc9ae8c52995
-  WonderPush: b0c9cde63d8b018d074ddc935dcd7993b1f14d4f
-  WonderPushExtension: 5217dce40acde00dc4b1b9efd1a3c0813eb8f7cf
+  WonderPush: 50675bc77142e92c6ab65654d4ad550733a79225
 
-PODFILE CHECKSUM: 76ef2b2bd35f9bee1c3fa673f79b3932ca497d1b
+PODFILE CHECKSUM: 23769b5d6b428685996cd604d4e524a2293f42c7
 
 COCOAPODS: 1.5.3

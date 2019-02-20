@@ -1,7 +1,7 @@
 #use_frameworks!
 
 target 'WonderPushDemo' do
-    platform :ios, '8.0'
+    platform :ios, '9.0'
 
     # For production:
     #   pod 'WonderPush', '~> 2.0'
@@ -12,11 +12,11 @@ target 'WonderPushDemo' do
 end
 
 target 'WonderPushNotificationServiceExtension' do
-    platform :ios, '8.0'
+    platform :ios, '9.0'
     # For production:
     #   pod 'WonderPushExtension', '~> 2.0'
     # For testing the latest master:
     #   pod 'WonderPushExtension', :git => 'https://github.com/wonderpush/wonderpush-ios-sdk.git', :tag => 'master'
     # For developing the SDK itself:
-    pod 'WonderPushExtension', :path => '../wonderpush-ios-sdk'
+    pod 'WonderPush', :subspecs => ['Extension'], :path => '../wonderpush-ios-sdk'
 end
