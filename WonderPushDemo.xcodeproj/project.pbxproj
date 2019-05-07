@@ -392,7 +392,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WonderPushDemo/Pods-WonderPushDemo-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-WonderPushDemo/Pods-WonderPushDemo-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WonderPush/WonderPush.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -403,7 +403,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WonderPushDemo/Pods-WonderPushDemo-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WonderPushDemo/Pods-WonderPushDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -1,10 +1,10 @@
 PODS:
-  - WonderPush (2.4.0):
-    - WonderPush/Core (= 2.4.0)
-  - WonderPush/Core (2.4.0)
-  - WonderPushExtension (2.4.0):
-    - WonderPushExtension/Extension (= 2.4.0)
-  - WonderPushExtension/Extension (2.4.0)
+  - WonderPush (3.0.0):
+    - WonderPush/Core (= 3.0.0)
+  - WonderPush/Core (3.0.0)
+  - WonderPushExtension (3.0.0):
+    - WonderPushExtension/Extension (= 3.0.0)
+  - WonderPushExtension/Extension (3.0.0)
 
 DEPENDENCIES:
   - WonderPush (from `../wonderpush-ios-sdk`)
@@ -17,9 +17,9 @@ EXTERNAL SOURCES:
     :path: "../wonderpush-ios-sdk"
 
 SPEC CHECKSUMS:
-  WonderPush: 4871fb418ee9eec4291752ca7f548c08d25a5c05
-  WonderPushExtension: 332c4c0635265eb7a743c874ead9929f31e90059
+  WonderPush: 4f2540d108e83708b09f9826781ec09c3d6e55bb
+  WonderPushExtension: 1dd20dc2476d234623cdd2aef75633a316c4bab0
 
 PODFILE CHECKSUM: 614058af1960fdeb7ddb18589a468301ce037661
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1
