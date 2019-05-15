@@ -87,15 +87,13 @@ static CGFloat cellHeight;
 
 - (IBAction)readInstallationCustomProperties:(id)sender
 {
-    [WonderPush downloadAllData:^(NSData *data, NSError *error) {
-        if (error) {
-            NSLog(@"Could not download data: %@", error);
-            return;
-        }
-        NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:@[string] applicationActivities:nil];
-        [self presentViewController:controller animated:YES completion:nil];
-    }];
+    NSDictionary *custom = [WonderPush getProperties];
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:custom options:0 error:&error];
+    NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Install custom properties" message:jsonStr preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"Close" style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 #pragma TABLE VIEW DATASOURCE METHODS
