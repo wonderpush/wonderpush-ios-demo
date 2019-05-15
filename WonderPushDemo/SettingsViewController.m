@@ -46,9 +46,11 @@
 
     if (@available(iOS 10.0, *)) {
         [[UNUserNotificationCenter currentNotificationCenter] getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
-            self.swtNotificationTypeAlert.on = settings.alertSetting == UNAuthorizationStatusAuthorized;
-            self.swtNotificationTypeBadge.on = settings.badgeSetting == UNAuthorizationStatusAuthorized;
-            self.swtNotificationTypeSound.on = settings.soundSetting == UNAuthorizationStatusAuthorized;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.swtNotificationTypeAlert.on = settings.alertSetting == UNAuthorizationStatusAuthorized;
+                self.swtNotificationTypeBadge.on = settings.badgeSetting == UNAuthorizationStatusAuthorized;
+                self.swtNotificationTypeSound.on = settings.soundSetting == UNAuthorizationStatusAuthorized;
+            });
         }];
     } else if (@available(iOS 8.0, *)) {
 #pragma clang diagnostic push
