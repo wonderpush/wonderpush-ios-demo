@@ -78,13 +78,17 @@
 
 - (void) loadSettings
 {
-    [self.swtEnableNotifications setOn:[WonderPush getNotificationEnabled]];
+    [self.swtEnableNotifications setOn:[WonderPush isSubscribedToNotifications]];
     self.txtUserId.text = [WonderPush userId];
 }
 
 - (IBAction) swtEnableNotifications_valueChange:(id)sender
 {
-    [WonderPush setNotificationEnabled:[self.swtEnableNotifications isOn]];
+    if ([self.swtEnableNotifications isOn]) {
+        [WonderPush subscribeToNotifications];
+    } else {
+        [WonderPush unsubscribeFromNotifications];
+    }
 }
 
 - (IBAction) swtEnableGeolocation_valueChange:(id)sender

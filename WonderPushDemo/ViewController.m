@@ -78,7 +78,7 @@ static CGFloat cellHeight;
 
 - (void) updateTitle
 {
-    if ([WonderPush getNotificationEnabled] == YES) {
+    if ([WonderPush isSubscribedToNotifications] == YES) {
         [self setTitle:@"SIMULATE AN EVENT BELOW"];
     } else {
         [self setTitle:@"(Push disabled)"];
@@ -133,9 +133,9 @@ static CGFloat cellHeight;
     id type = [cellConf valueForKey:@"event"];
     id data = [cellConf valueForKey:@"data"];
     if (type == nil) {
-        [WonderPush putInstallationCustomProperties:data];
+        [WonderPush putProperties:data];
     } else {
-        [WonderPush trackEvent:type withData:data];
+        [WonderPush trackEvent:type attributes:data];
     }
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     [cell setSelected:NO];
