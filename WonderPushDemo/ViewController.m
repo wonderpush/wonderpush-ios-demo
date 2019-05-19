@@ -39,7 +39,24 @@ static CGFloat cellHeight;
                           @{@"title":@"SEX: MALE",        @"data":@{@"string_sex":@"male"},
                             @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]},
                           @{@"title":@"SEX: FEMALE",      @"data":@{@"string_sex":@"female"},
-                            @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]}];
+                            @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]},
+                          @{@"title":@"TAG: CLEAR",       @"tags":@[@"!clear"],
+                            @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]},
+                          @{@"title":@"TAG: GET",         @"tags":@[@"!get"],
+                            @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]},
+                          @{@"title":@"TAG: +foo",        @"tags":@[@"+foo"],
+                            @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]},
+                          @{@"title":@"TAG: -foo",        @"tags":@[@"-foo"],
+                            @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]},
+                          @{@"title":@"TAG: foo?",        @"tags":@[@"?foo"],
+                            @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]},
+                          @{@"title":@"TAG: +bar",        @"tags":@[@"+bar"],
+                            @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]},
+                          @{@"title":@"TAG: -bar",        @"tags":@[@"-bar"],
+                            @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]},
+                          @{@"title":@"TAG: bar?",        @"tags":@[@"?bar"],
+                            @"bgColor": [UIColor colorWithRed:222/255. green:113/255. blue:113/255. alpha:1.0]},
+                          ];
     [self calculateNewCellHeightForSize:self.tableView.frame.size];
 }
 
@@ -132,7 +149,39 @@ static CGFloat cellHeight;
     id cellConf = [cellConfiguration objectAtIndex:[indexPath row]];
     id type = [cellConf valueForKey:@"event"];
     id data = [cellConf valueForKey:@"data"];
-    if (type == nil) {
+    id tags = [cellConf valueForKey:@"tags"];
+    if ([tags isKindOfClass:[NSArray class]]) {
+        for (id command in tags) {
+            switch ([command characterAtIndex:0]) {
+                case '+':
+                    [WonderPush addTag:[command substringFromIndex:1]];
+                    break;
+                case '-':
+                    [WonderPush removeTag:[command substringFromIndex:1]];
+                    break;
+                case '?': {
+                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"Has tag %@?", [command substringFromIndex:1]]
+                                                                                   message:([WonderPush hasTag:[command substringFromIndex:1]] ? @"Yes" : @"No")
+                                                                            preferredStyle:UIAlertControllerStyleAlert];
+                    [alert addAction:[UIAlertAction actionWithTitle:@"Close" style:UIAlertActionStyleCancel handler:nil]];
+                    [self presentViewController:alert animated:YES completion:nil];
+                    break; }
+                case '!':
+                    if ([command isEqualToString:@"!clear"]) {
+                        [WonderPush removeAllTags];
+                    } else if ([command isEqualToString:@"!get"]) {
+                        NSOrderedSet *tags = [WonderPush getTags];
+                        NSError *error;
+                        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[tags array] options:0 error:&error];
+                        NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+                        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Installation tags" message:jsonStr preferredStyle:UIAlertControllerStyleAlert];
+                        [alert addAction:[UIAlertAction actionWithTitle:@"Close" style:UIAlertActionStyleCancel handler:nil]];
+                        [self presentViewController:alert animated:YES completion:nil];
+                    }
+                    break;
+            }
+        }
+    } else if (type == nil) {
         [WonderPush putProperties:data];
     } else {
         [WonderPush trackEvent:type attributes:data];
