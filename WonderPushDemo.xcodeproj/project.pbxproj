@@ -140,7 +140,6 @@
 				AE255F249F192EAAB49AF85F /* Pods-WonderPushNotificationServiceExtension.debug.xcconfig */,
 				0709A041E3D848F598D110F8 /* Pods-WonderPushNotificationServiceExtension.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -282,7 +281,7 @@
 			};
 			buildConfigurationList = A1B8509519DC05FE00D1B6FB /* Build configuration list for PBXProject "WonderPushDemo" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
