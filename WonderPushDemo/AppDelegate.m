@@ -85,7 +85,7 @@
 /**
  Open all URLs with a wonderpush.com hostname in a web view.
  */
-- (NSURL *) wonderPushWillOpenURL:(NSURL *)URL
+- (void) wonderPushWillOpenURL:(NSURL *)URL withCompletionHandler:(void (^)(NSURL *))completionHandler
 {
     if ([[URL host] hasSuffix:@".wonderpush.com"]) {
         id navigationController = [[[UIApplication sharedApplication] keyWindow] rootViewController];
@@ -97,9 +97,10 @@
             webView.frame = controller.view.bounds;
             [webView loadRequest:[NSURLRequest requestWithURL:URL]];
             [navigationController pushViewController:controller animated:true];
-            return nil;
+            completionHandler(nil);
+            return;
         }
     }
-    return URL;
+    completionHandler(URL);
 }
 @end
