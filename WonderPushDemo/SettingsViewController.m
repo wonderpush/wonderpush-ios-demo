@@ -34,15 +34,7 @@
     [self.swtEnableGeolocation setOn:geolocation];
     [self.swtUserConsent setOn:[WonderPush getUserConsent]];
 
-    if ([WonderPush isReady]) {
-        [self loadSettings];
-    } else {
-        [self.swtEnableNotifications setEnabled:NO];
-        [[NSNotificationCenter defaultCenter] addObserverForName:WP_NOTIFICATION_INITIALIZED object:nil queue:nil usingBlock:^(NSNotification *note) {
-            [self.swtEnableNotifications setEnabled:YES];
-            [self loadSettings];
-        }];
-    }
+    [self loadSettings];
 
     if (@available(iOS 10.0, *)) {
         [[UNUserNotificationCenter currentNotificationCenter] getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {

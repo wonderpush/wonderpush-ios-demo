@@ -76,13 +76,7 @@ static CGFloat cellHeight;
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    if ([WonderPush isReady]) {
-        [self updateTitle];
-    } else {
-        [[NSNotificationCenter defaultCenter] addObserverForName:WP_NOTIFICATION_INITIALIZED object:nil queue:nil usingBlock:^(NSNotification *note) {
-            [self updateTitle];
-        }];
-    }
+    [self updateTitle];
 }
 
 - (BOOL)shouldAutorotate
