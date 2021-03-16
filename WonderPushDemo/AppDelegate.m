@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import <WonderPush/WonderPush.h>
-#import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 
 
 @interface AppDelegate () <WonderPushDelegate>
@@ -91,7 +91,7 @@
         id navigationController = [[[UIApplication sharedApplication] keyWindow] rootViewController];
         if ([navigationController isKindOfClass:[UINavigationController class]]) {
             UIViewController *controller = [UIViewController new];
-            UIWebView *webView = [UIWebView new];
+            WKWebView *webView = [WKWebView new];
             webView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
             [controller.view addSubview:webView];
             webView.frame = controller.view.bounds;
