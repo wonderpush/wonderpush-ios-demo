@@ -70,7 +70,7 @@
 
 - (void) loadSettings
 {
-    [self.swtEnableNotifications setOn:[WonderPush isSubscribedToNotifications]];
+    [self.swtEnableNotifications setOn:[WonderPush isSubscribedToNotifications] && [WonderPush installationId]];
     self.txtUserId.text = [WonderPush userId];
 }
 
