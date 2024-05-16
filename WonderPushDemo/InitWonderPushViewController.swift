@@ -52,7 +52,21 @@ import WonderPush
             self.present(alert, animated: true)
             return
         }
-        WonderPush.setClientId(clientId!, secret: secret!);
+        if let defaults = UserDefaults(suiteName: "group.com.wonderpush.demo") {
+            defaults.setValue(clientId, forKey: "wp_clientId")
+            defaults.setValue(secret, forKey: "wp_secret")
+            defaults.synchronize()
+        }
+
+        WonderPush.setClientId(clientId!, secret: secret!)
+        let alert = UIAlertController(title: nil, message: "You must restart the app in order to use these new values", preferredStyle: .alert)
+        let kill = UIAlertAction(title: "Kill app", style: .destructive, handler: {(action) in
+            fatalError("Restart app to take settings into account")
+        })
+        alert.addAction(kill)
+        alert.addAction(UIAlertAction(title: "Later", style: .cancel))
+        self.present(alert, animated: true)
+        self.doneButton.isEnabled = true
     }
 
     @IBAction func touchDone(_ sender: Any) {
