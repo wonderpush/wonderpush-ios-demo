@@ -20,6 +20,7 @@
 		A1B850A919DC05FE00D1B6FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B850A719DC05FE00D1B6FB /* Main.storyboard */; };
 		A1B850AB19DC05FF00D1B6FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1B850AA19DC05FF00D1B6FB /* Images.xcassets */; };
 		A1B850AE19DC05FF00D1B6FB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1B850AC19DC05FF00D1B6FB /* LaunchScreen.xib */; };
+		EFAC6D482BF4E12900C2760C /* InitWonderPushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAC6D472BF4E12900C2760C /* InitWonderPushViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,9 @@
 		AE255F249F192EAAB49AF85F /* Pods-WonderPushNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WonderPushNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-WonderPushNotificationServiceExtension/Pods-WonderPushNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		AF420E007121266A1C4E4AA6 /* Pods-WonderPushDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WonderPushDemo.release.xcconfig"; path = "Target Support Files/Pods-WonderPushDemo/Pods-WonderPushDemo.release.xcconfig"; sourceTree = "<group>"; };
 		D558B7072893F2A925FCDF4B /* libPods-WonderPushDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WonderPushDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFAC6D442BF4E07200C2760C /* WonderPushDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WonderPushDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		EFAC6D472BF4E12900C2760C /* InitWonderPushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitWonderPushViewController.swift; sourceTree = "<group>"; };
+		EFAC6D492BF5C48B00C2760C /* WonderPushNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WonderPushNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 		3D3A50141FE18FC8009B5799 /* WonderPushNotificationServiceExtension */ = {
 			isa = PBXGroup;
 			children = (
+				EFAC6D492BF5C48B00C2760C /* WonderPushNotificationServiceExtension.entitlements */,
 				3D3A50151FE18FC8009B5799 /* NotificationService.h */,
 				3D3A50161FE18FC8009B5799 /* NotificationService.m */,
 				3D3A50181FE18FC8009B5799 /* Info.plist */,
@@ -178,6 +183,8 @@
 				A1B850AC19DC05FF00D1B6FB /* LaunchScreen.xib */,
 				A1B8509D19DC05FE00D1B6FB /* Supporting Files */,
 				9939EF10220B3B9500F1F974 /* Settings.bundle */,
+				EFAC6D442BF4E07200C2760C /* WonderPushDemo-Bridging-Header.h */,
+				EFAC6D472BF4E12900C2760C /* InitWonderPushViewController.swift */,
 			);
 			path = WonderPushDemo;
 			sourceTree = "<group>";
@@ -217,6 +224,7 @@
 				3D3A500F1FE18FC8009B5799 /* Sources */,
 				3D3A50101FE18FC8009B5799 /* Frameworks */,
 				3D3A50111FE18FC8009B5799 /* Resources */,
+				1836A4C0B63370372C661077 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,6 +276,7 @@
 					A1B8509919DC05FE00D1B6FB = {
 						CreatedOnToolsVersion = 6.0.1;
 						DevelopmentTeam = N9ZG2P9A72;
+						LastSwiftMigration = 1540;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -323,6 +332,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1836A4C0B63370372C661077 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WonderPushNotificationServiceExtension/Pods-WonderPushNotificationServiceExtension-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/WonderPushExtension/WonderPushExtension.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WonderPushExtension.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WonderPushNotificationServiceExtension/Pods-WonderPushNotificationServiceExtension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7D287507488C81D3126F41FC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -421,6 +448,7 @@
 				A1B850A319DC05FE00D1B6FB /* AppDelegate.m in Sources */,
 				A1B850A019DC05FE00D1B6FB /* main.m in Sources */,
 				3DBC92C41B5FC2BC00E07FB8 /* SettingsViewController.m in Sources */,
+				EFAC6D482BF4E12900C2760C /* InitWonderPushViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +511,7 @@
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = WonderPushNotificationServiceExtension/WonderPushNotificationServiceExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 17;
@@ -523,6 +552,7 @@
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = WonderPushNotificationServiceExtension/WonderPushNotificationServiceExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
@@ -656,19 +686,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = WonderPushDemo/WonderPushDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 17;
+				DEVELOPMENT_TEAM = N9ZG2P9A72;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = WonderPushDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 4.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wonderpush.demo;
 				PRODUCT_NAME = WonderPushDemo;
+				SWIFT_OBJC_BRIDGING_HEADER = "WonderPushDemo/WonderPushDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -679,19 +714,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = WonderPushDemo/WonderPushDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 17;
+				DEVELOPMENT_TEAM = N9ZG2P9A72;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = WonderPushDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 4.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wonderpush.demo;
 				PRODUCT_NAME = WonderPushDemo;
+				SWIFT_OBJC_BRIDGING_HEADER = "WonderPushDemo/WonderPushDemo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

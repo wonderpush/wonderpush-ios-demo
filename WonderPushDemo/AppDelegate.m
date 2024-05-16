@@ -17,13 +17,24 @@
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    BOOL requiresUserConsent = [[NSUserDefaults standardUserDefaults] objectForKey:@"requiresUserConsent"] == nil ? YES : [[NSUserDefaults standardUserDefaults] boolForKey:@"requiresUserConsent"];
++ (void) initializeWonderPushWithClientId:(NSString *)clientId secret:(NSString *)secret {
+    BOOL requiresUserConsent = [[NSUserDefaults standardUserDefaults] objectForKey:@"requiresUserConsent"] == nil ? NO : [[NSUserDefaults standardUserDefaults] boolForKey:@"requiresUserConsent"];
     [WonderPush setRequiresUserConsent:requiresUserConsent];
     [WonderPush setLogging:YES];
-    [WonderPush setClientId:@"7524c8a317c1794c0b23895dce3a3314d6a24105" secret:@"b43a2d0fbdb54d24332b4d70736954eab5d24d29012b18ef6d214ff0f51e7901"];
-    [WonderPush setupDelegateForApplication:application];
+    [WonderPush setClientId:clientId secret:secret];
+    [WonderPush setupDelegateForApplication:[UIApplication sharedApplication]];
     [WonderPush setupDelegateForUserNotificationCenter];
+}
+
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.wonderpush.demo"];
+    NSString *clientId = [defaults stringForKey:@"wp_clientId"];
+    NSString *secret = [defaults stringForKey:@"wp_secret"];
+    if (clientId && secret) {
+        [AppDelegate initializeWonderPushWithClientId:clientId secret:secret];
+    } else {
+        NSLog(@"Could not initialize WonderPush. Client ID: %@ secret: %@", clientId, secret ? @"<redacted>" : nil);
+    }
     [WonderPush setDelegate:self];
     return YES;
 }

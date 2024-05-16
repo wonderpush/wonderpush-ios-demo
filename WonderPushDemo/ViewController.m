@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <WonderPush/WonderPush.h>
+#import "WonderPushDemo-Swift.h"
 
 @interface ViewController ()
 
@@ -77,6 +78,10 @@ static CGFloat cellHeight;
 - (void)viewDidAppear:(BOOL)animated
 {
     [self updateTitle];
+    if (![WonderPush isInitialized]) {
+        InitWonderPushViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"InitWonderPushViewController"];
+        [self presentViewController:controller animated:YES completion:nil];
+    }
 }
 
 - (BOOL)shouldAutorotate

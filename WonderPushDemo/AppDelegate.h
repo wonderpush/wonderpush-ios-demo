@@ -14,5 +14,6 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 
++ (void) initializeWonderPushWithClientId:(NSString *)clientId secret:(NSString *)secret;
 @end
 
